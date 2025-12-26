@@ -1,0 +1,19 @@
+<div class="w-full max-w-[1280px] px-4 md:px-10 mx-auto py-12">
+  <h2 class="text-3xl font-bold text-[#0d121b] dark:text-white mb-8">Support Staff</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    <div *ngFor="let clerk of clerks" class="bg-surface-light dark:bg-surface-dark rounded-lg border border-[#e7ebf3] dark:border-[#2a3441] p-5 hover:border-primary/30 transition-all duration-300">
+      <h3 class="text-lg font-bold text-[#0d121b] dark:text-white mb-1">{{ clerk.name }}</h3>
+      <p class="text-sm font-medium text-[#4c669a] dark:text-[#94a3b8] mb-3">{{ clerk.position }}</p>
+      <div class="space-y-2">
+        <a [href]="'mailto:' + clerk.email" class="flex items-center gap-2 text-sm text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[16px]">mail</span>
+          <span>{{ clerk.email }}</span>
+        </a>
+        <a [href]="'tel:' + clerk.phone" class="flex items-center gap-2 text-sm text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[16px]">call</span>
+          <span>{{ clerk.phone }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

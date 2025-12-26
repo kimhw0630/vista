@@ -1,0 +1,304 @@
+<!-- Breadcrumbs -->
+<div class="bg-background-light dark:bg-background-dark py-4">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center text-sm text-[#4c669a] dark:text-gray-400">
+      <a class="hover:text-primary transition-colors" routerLink="/">Home</a>
+      <span class="material-symbols-outlined text-[16px] mx-2">chevron_right</span>
+      <a class="hover:text-primary transition-colors" routerLink="/attorneys">Attorneys</a>
+      <span class="material-symbols-outlined text-[16px] mx-2">chevron_right</span>
+      <span class="text-[#0d121b] dark:text-white font-medium">Jane Doe</span>
+    </nav>
+  </div>
+</div>
+
+<!-- Main Content Layout -->
+<main class="flex-grow max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full py-8">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-12">
+    <!-- Left Sidebar (Sticky) -->
+    <aside class="lg:col-span-4 xl:col-span-3">
+      <div class="lg:sticky lg:top-24 space-y-8">
+        <!-- Profile Card -->
+        <div class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-sm border border-[#e7ebf3] dark:border-gray-800">
+          <div class="w-full aspect-[3/4] rounded-lg bg-gray-200 overflow-hidden mb-5 relative group">
+            <!-- Image -->
+            <img alt="Professional headshot of attorney Jane Doe" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkQaHogmxC8_JtPlQXIj6mWc3Ut3-r12UR0OYZwcGyjEZnCDw_ddjCcPGxwVEf1Vqp-GWts6OoGHM2Wn6bYTq_B4xbI-k28OLrKRhBOMR_AI19TziJY46N8CLhUnKOR8n6qcZr9DzOcfLSCgzdP-RKIL3srThuX8Ko9VmodB9DAOMvrGBaiq7dwmOntKTchHYncQR502OyCwyZGYhpGDxYEtEAKY2yEMQC-UCV4UB4zlgUVfTj43A_mRbPb3EjbWjDZehct8sOzsE_"/>
+          </div>
+          <!-- Contact Actions -->
+          <div class="grid grid-cols-1 gap-3">
+            <button class="flex items-center justify-center gap-2 bg-primary text-white h-10 rounded-lg text-sm font-bold hover:bg-blue-700 transition-colors w-full">
+              <span class="material-symbols-outlined text-[18px]">mail</span>
+              Email Me
+            </button>
+            <button class="flex items-center justify-center gap-2 bg-[#e7ebf3] dark:bg-gray-800 text-[#0d121b] dark:text-white h-10 rounded-lg text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors w-full">
+              <span class="material-symbols-outlined text-[18px]">contact_page</span>
+              Download vCard
+            </button>
+          </div>
+          <!-- Quick Contact Info -->
+          <div class="mt-6 pt-6 border-t border-[#e7ebf3] dark:border-gray-700 space-y-4">
+            <a class="flex items-start gap-3 group" href="tel:+12125550123">
+              <span class="material-symbols-outlined text-primary mt-0.5">call</span>
+              <div>
+                <p class="text-xs text-[#4c669a] dark:text-gray-400 font-medium uppercase tracking-wider">Phone</p>
+                <p class="text-sm font-medium group-hover:text-primary transition-colors">+1 (212) 555-0123</p>
+              </div>
+            </a>
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
+              <div>
+                <p class="text-xs text-[#4c669a] dark:text-gray-400 font-medium uppercase tracking-wider">Office</p>
+                <p class="text-sm font-medium">New York, NY</p>
+              </div>
+            </div>
+            <a class="flex items-start gap-3 group" href="#">
+              <span class="material-symbols-outlined text-primary mt-0.5">link</span>
+              <div>
+                <p class="text-xs text-[#4c669a] dark:text-gray-400 font-medium uppercase tracking-wider">LinkedIn</p>
+                <p class="text-sm font-medium group-hover:text-primary transition-colors">linkedin.com/in/janedoe</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Education & Admissions -->
+        <div class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-[#e7ebf3] dark:border-gray-800">
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-sm font-bold uppercase tracking-wider text-[#4c669a] dark:text-gray-400 mb-3">Education</h3>
+              <ul class="space-y-3">
+                <li class="flex gap-3">
+                  <div class="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
+                  <div>
+                    <p class="text-sm font-bold">Harvard Law School</p>
+                    <p class="text-sm text-[#4c669a] dark:text-gray-400">J.D., magna cum laude, 2004</p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <div class="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
+                  <div>
+                    <p class="text-sm font-bold">Yale University</p>
+                    <p class="text-sm text-[#4c669a] dark:text-gray-400">B.A., Political Science, 2001</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="pt-6 border-t border-[#e7ebf3] dark:border-gray-700">
+              <h3 class="text-sm font-bold uppercase tracking-wider text-[#4c669a] dark:text-gray-400 mb-3">Bar Admissions</h3>
+              <ul class="space-y-2">
+                <li class="text-sm font-medium">New York State Bar</li>
+                <li class="text-sm font-medium">District of Columbia Bar</li>
+                <li class="text-sm font-medium">U.S. Supreme Court</li>
+              </ul>
+            </div>
+            <div class="pt-6 border-t border-[#e7ebf3] dark:border-gray-700">
+              <h3 class="text-sm font-bold uppercase tracking-wider text-[#4c669a] dark:text-gray-400 mb-3">Practice Areas</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-primary/10 text-primary dark:bg-primary/20 dark:text-blue-300">
+                  Corporate Law
+                </span>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-primary/10 text-primary dark:bg-primary/20 dark:text-blue-300">
+                  M&A
+                </span>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-primary/10 text-primary dark:bg-primary/20 dark:text-blue-300">
+                  Securities
+                </span>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-primary/10 text-primary dark:bg-primary/20 dark:text-blue-300">
+                  Private Equity
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="lg:col-span-8 xl:col-span-9 flex flex-col">
+      <!-- Header Info -->
+      <div class="mb-8">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-[#0d121b] dark:text-white mb-2">Jane Doe</h1>
+        <p class="text-xl text-[#4c669a] dark:text-gray-400 font-medium">Senior Partner <span class="mx-2 text-gray-300">|</span> Corporate Law & M&A</p>
+      </div>
+
+      <!-- Tabs Navigation -->
+      <div class="mb-8 border-b border-[#e7ebf3] dark:border-gray-700">
+        <div class="flex overflow-x-auto no-scrollbar gap-8">
+          <a (click)="setActiveTab('biography')" [class.border-primary]="activeTab === 'biography'" [class.text-primary]="activeTab === 'biography'" [class.border-transparent]="activeTab !== 'biography'" [class.text-[#4c669a]]="activeTab !== 'biography'" class="whitespace-nowrap pb-3 border-b-2 dark:text-gray-400 hover:text-[#0d121b] dark:hover:text-white font-bold text-sm tracking-wide transition-colors cursor-pointer">
+            Biography
+          </a>
+          <a (click)="setActiveTab('experience')" [class.border-primary]="activeTab === 'experience'" [class.text-primary]="activeTab === 'experience'" [class.border-transparent]="activeTab !== 'experience'" [class.text-[#4c669a]]="activeTab !== 'experience'" class="whitespace-nowrap pb-3 border-b-2 dark:text-gray-400 hover:text-[#0d121b] dark:hover:text-white font-bold text-sm tracking-wide transition-colors cursor-pointer">
+            Experience
+          </a>
+          <a (click)="setActiveTab('publications')" [class.border-primary]="activeTab === 'publications'" [class.text-primary]="activeTab === 'publications'" [class.border-transparent]="activeTab !== 'publications'" [class.text-[#4c669a]]="activeTab !== 'publications'" class="whitespace-nowrap pb-3 border-b-2 dark:text-gray-400 hover:text-[#0d121b] dark:hover:text-white font-bold text-sm tracking-wide transition-colors cursor-pointer">
+            Publications
+          </a>
+          <a (click)="setActiveTab('news')" [class.border-primary]="activeTab === 'news'" [class.text-primary]="activeTab === 'news'" [class.border-transparent]="activeTab !== 'news'" [class.text-[#4c669a]]="activeTab !== 'news'" class="whitespace-nowrap pb-3 border-b-2 dark:text-gray-400 hover:text-[#0d121b] dark:hover:text-white font-bold text-sm tracking-wide transition-colors cursor-pointer">
+            News & Insights
+          </a>
+        </div>
+      </div>
+
+      <!-- Tab Content: Biography -->
+      <section class="mb-12" *ngIf="activeTab === 'biography'">
+        <div class="prose prose-lg dark:prose-invert max-w-none text-[#0d121b] dark:text-gray-200">
+          <p class="text-lg leading-relaxed mb-6">
+            Jane Doe has over 20 years of experience in corporate law, specializing in domestic and cross-border mergers and acquisitions. She has successfully guided numerous Fortune 500 companies through complex transactions, regulatory challenges, and strategic restructurings. Her approach is client-focused, ensuring that every legal strategy aligns seamlessly with broader business goals.
+          </p>
+          <p class="leading-relaxed mb-6">
+            Before joining VISTA, Jane served as General Counsel for a major technology firm in Silicon Valley, where she oversaw global compliance and IP litigation. This in-house experience gives her a unique perspective on the practical challenges faced by corporate legal departments. She is frequently quoted in the Wall Street Journal and The Financial Times regarding trends in M&A regulation.
+          </p>
+          <p class="leading-relaxed">
+            Jane is also deeply committed to pro bono work, regularly advising non-profit organizations on governance and operational matters. She currently serves on the board of the New York Legal Aid Society.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: Representative Matters -->
+      <section class="mb-12" *ngIf="activeTab === 'experience'">
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+          <span class="bg-primary/10 text-primary p-2 rounded-lg">
+            <span class="material-symbols-outlined">gavel</span>
+          </span>
+          Representative Matters
+        </h2>
+        <div class="space-y-4">
+          <div class="bg-surface-light dark:bg-surface-dark border border-[#e7ebf3] dark:border-gray-800 rounded-lg p-5 hover:border-primary/50 transition-colors cursor-default">
+            <h3 class="font-bold text-lg mb-2">TechGiant Acquisition</h3>
+            <p class="text-[#4c669a] dark:text-gray-400 text-sm mb-3">Represented TechGiant Inc. in its $4.5 billion acquisition of CloudSecure Ltd., involving regulatory approvals across three continents.</p>
+            <div class="flex gap-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-primary bg-primary/5 px-2 py-1 rounded">M&A</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-primary bg-primary/5 px-2 py-1 rounded">Technology</span>
+            </div>
+          </div>
+          <div class="bg-surface-light dark:bg-surface-dark border border-[#e7ebf3] dark:border-gray-800 rounded-lg p-5 hover:border-primary/50 transition-colors cursor-default">
+            <h3 class="font-bold text-lg mb-2">Global Pharma Merger</h3>
+            <p class="text-[#4c669a] dark:text-gray-400 text-sm mb-3">Served as lead counsel for a European pharmaceutical conglomerate in a merger of equals valued at $12 billion.</p>
+            <div class="flex gap-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-primary bg-primary/5 px-2 py-1 rounded">Healthcare</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-primary bg-primary/5 px-2 py-1 rounded">Cross-Border</span>
+            </div>
+          </div>
+          <div class="bg-surface-light dark:bg-surface-dark border border-[#e7ebf3] dark:border-gray-800 rounded-lg p-5 hover:border-primary/50 transition-colors cursor-default">
+            <h3 class="font-bold text-lg mb-2">Retail Restructuring</h3>
+            <p class="text-[#4c669a] dark:text-gray-400 text-sm mb-3">Advised a national retail chain on debt restructuring and divestiture of non-core assets, preserving over 5,000 jobs.</p>
+            <div class="flex gap-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-primary bg-primary/5 px-2 py-1 rounded">Restructuring</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Publications -->
+      <section class="mb-12" *ngIf="activeTab === 'publications'">
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+          <span class="bg-primary/10 text-primary p-2 rounded-lg">
+            <span class="material-symbols-outlined">menu_book</span>
+          </span>
+          Selected Publications
+        </h2>
+        <div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e7ebf3] dark:border-gray-800 overflow-hidden divide-y divide-[#e7ebf3] dark:divide-gray-800">
+          <!-- Item 1 -->
+          <details class="group">
+            <summary class="flex items-center justify-between p-5 cursor-pointer list-none hover:bg-gray-50 dark:hover:bg-gray-800/50">
+              <div class="flex flex-col">
+                <span class="font-bold text-[#0d121b] dark:text-white">The Future of Antitrust in Big Tech</span>
+                <span class="text-sm text-[#4c669a] dark:text-gray-400">Harvard Law Review, Spring 2023</span>
+              </div>
+              <span class="material-symbols-outlined text-gray-400 transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <div class="px-5 pb-5 text-sm text-[#4c669a] dark:text-gray-400 leading-relaxed">
+              An in-depth analysis of proposed legislative changes to antitrust enforcement in the United States and European Union, focusing on the implications for major technology platforms and digital marketplaces.
+              <div class="mt-3">
+                <a class="text-primary font-bold text-xs uppercase tracking-wider hover:underline flex items-center gap-1" href="#">
+                  Read Article <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+          </details>
+          <!-- Item 2 -->
+          <details class="group">
+            <summary class="flex items-center justify-between p-5 cursor-pointer list-none hover:bg-gray-50 dark:hover:bg-gray-800/50">
+              <div class="flex flex-col">
+                <span class="font-bold text-[#0d121b] dark:text-white">Navigating Cross-Border M&A in Volatile Markets</span>
+                <span class="text-sm text-[#4c669a] dark:text-gray-400">International Corporate Law Journal, 2022</span>
+              </div>
+              <span class="material-symbols-outlined text-gray-400 transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <div class="px-5 pb-5 text-sm text-[#4c669a] dark:text-gray-400 leading-relaxed">
+              This paper explores strategies for mitigating currency and political risk in international transactions, with case studies drawn from the 2020-2022 global economic landscape.
+              <div class="mt-3">
+                <a class="text-primary font-bold text-xs uppercase tracking-wider hover:underline flex items-center gap-1" href="#">
+                  Read Article <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+          </details>
+          <!-- Item 3 -->
+          <details class="group">
+            <summary class="flex items-center justify-between p-5 cursor-pointer list-none hover:bg-gray-50 dark:hover:bg-gray-800/50">
+              <div class="flex flex-col">
+                <span class="font-bold text-[#0d121b] dark:text-white">ESG Disclosures: A New Era for Corporate Governance</span>
+                <span class="text-sm text-[#4c669a] dark:text-gray-400">Yale Law Journal, 2021</span>
+              </div>
+              <span class="material-symbols-outlined text-gray-400 transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <div class="px-5 pb-5 text-sm text-[#4c669a] dark:text-gray-400 leading-relaxed">
+              Examining the shifting legal requirements for Environmental, Social, and Governance reporting and how boards can prepare for increased shareholder scrutiny.
+              <div class="mt-3">
+                <a class="text-primary font-bold text-xs uppercase tracking-wider hover:underline flex items-center gap-1" href="#">
+                  Read Article <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- News & Insights Section -->
+      <section class="mb-12" *ngIf="activeTab === 'news'">
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+          <span class="bg-primary/10 text-primary p-2 rounded-lg">
+            <span class="material-symbols-outlined">newspaper</span>
+          </span>
+          News & Insights
+        </h2>
+        <div class="text-[#4c669a] dark:text-gray-400 text-center py-12">
+          <span class="material-symbols-outlined text-6xl mb-4 opacity-20">article</span>
+          <p>No recent news or insights available.</p>
+        </div>
+      </section>
+
+      <!-- Professional Affiliations / Bottom Grid -->
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-[#e7ebf3] dark:border-gray-800">
+          <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary">groups</span>
+            Affiliations
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2 text-sm text-[#4c669a] dark:text-gray-400">
+              <span class="material-symbols-outlined text-[18px] text-green-500">check_circle</span>
+              <span>American Bar Association, Business Law Section</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-[#4c669a] dark:text-gray-400">
+              <span class="material-symbols-outlined text-[18px] text-green-500">check_circle</span>
+              <span>New York State Bar Association</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-[#4c669a] dark:text-gray-400">
+              <span class="material-symbols-outlined text-[18px] text-green-500">check_circle</span>
+              <span>International Bar Association</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-primary text-white p-6 rounded-xl relative overflow-hidden group cursor-pointer">
+          <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white/10 rounded-full blur-2xl group-hover:bg-white/20 transition-colors"></div>
+          <h3 class="font-bold text-lg mb-2 relative z-10">Work with Jane</h3>
+          <p class="text-blue-100 text-sm mb-4 relative z-10">Schedule a preliminary consultation to discuss your case details.</p>
+          <button class="bg-white text-primary text-sm font-bold py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors relative z-10">
+            Book Consultation
+          </button>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
