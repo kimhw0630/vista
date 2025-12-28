@@ -1,0 +1,93 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
+$config = require 'config.php';
+
+header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+  exit(0);
+}
+
+$data = json_decode(file_get_contents("php://input"), true);
+
+$email = filter_var($data['email'] ?? '', FILTER_VALIDATE_EMAIL);
+$fullName = trim($data['fullName'] ?? '');
+$phone = trim($data['phone'] ?? '');
+$subject = trim($data['subject'] ?? '');
+$message = trim($data['message'] ?? '');
+
+if (!$email || !$fullName || !$message) {
+  http_response_code(400);
+  echo json_encode(["success" => false, "message" => "Please fill in all required fields"]);
+  exit;
+}
+
+try {
+  // =====================
+  // Email to YOU (using GoDaddy SMTP)
+  // =====================
+  $mail = new PHPMailer(true);
+  $mail->isSMTP();
+  $mail->Host = 'relay-hosting.secureserver.net';
+  $mail->SMTPAuth = false;
+  $mail->Port = 25;
+
+  $mail->setFrom($config['owner_email'], $config['site_name']);
+  $mail->addAddress($config['owner_email']);
+  $mail->addReplyTo($email, $fullName);
+
+  $mail->Subject = "VISTA Contact Form - $subject";
+  $mail->Body = "
+Name: $fullName
+Email: $email
+Phone: $phone
+Subject: $subject
+
+Message:
+$message
+";
+
+  $mail->send();
+
+  // =====================
+  // Auto-reply to CUSTOMER (using GoDaddy SMTP)
+  // =====================
+  $reply = new PHPMailer(true);
+  $reply->isSMTP();
+  $reply->Host = 'relay-hosting.secureserver.net';
+  $reply->SMTPAuth = false;
+  $reply->Port = 25;
+
+  $reply->setFrom($config['owner_email'], $config['site_name']);
+  $reply->addAddress($email, $fullName);
+
+  $reply->Subject = 'We received your message';
+  $reply->Body = "
+Hi $fullName,
+
+Thank you for contacting VISTA.
+We have received your message and will get back to you within 24 hours.
+
+This is an automatic reply — no need to respond.
+
+Best regards,
+{$config['site_name']}
+";
+
+  $reply->send();
+
+  echo json_encode(["success" => true, "message" => "Message sent successfully"]);
+
+} catch (Exception $e) {
+  http_response_code(500);
+  echo json_encode(["success" => false, "message" => "Failed to send message. Please try again later."]);
+}

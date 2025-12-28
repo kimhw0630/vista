@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-form',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './contact-form.html',
   styleUrl: './contact-form.scss',
   standalone: true
@@ -36,7 +37,7 @@ export class ContactFormComponent {
     this.submitMessage = '';
 
     try {
-      const response = await fetch('/assets/api/contact.php', {
+      const response = await fetch('/assets/api/contact_godaddy.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

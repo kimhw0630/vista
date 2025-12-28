@@ -5,6 +5,7 @@ import { PracticeAreasComponent } from './pages/practice-areas/practice-areas';
 import { AttorneysComponent } from './pages/attorneys/attorneys';
 import { ContactComponent } from './pages/contact/contact';
 import { AttorneyProfileComponent } from '../pages/attorney-profile/attorney-profile';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy';
 
 export const routes: Routes = [
   {
@@ -30,5 +31,9 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'privacy-policy',
+    component: PrivacyPolicyComponent
   }
 ];
