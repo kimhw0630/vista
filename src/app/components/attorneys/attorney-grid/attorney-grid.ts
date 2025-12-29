@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { AttorneyService, Attorney } from '../../../services/attorney.service';
 
 @Component({
   selector: 'app-attorney-grid',
@@ -9,5 +10,9 @@ import { RouterLink } from '@angular/router';
   standalone: true
 })
 export class AttorneyGridComponent {
+  attorneys: Attorney[];
 
+  constructor(private attorneyService: AttorneyService) {
+    this.attorneys = this.attorneyService.getAttorneys();
+  }
 }

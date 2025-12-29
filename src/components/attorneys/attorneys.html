@@ -5,46 +5,16 @@
       <p class="text-gray-600 dark:text-gray-300">Driven by a passion for justice and a commitment to excellence. Our team brings decades of combined experience to every case.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="flex flex-col items-center">
-        <div class="w-full aspect-[3/4] rounded-lg overflow-hidden mb-6 bg-gray-200">
-          <div class="w-full h-full bg-cover bg-top hover:scale-105 transition-transform duration-500" style="background-image: url('images/JaeHyunPark_color.png');"></div>
-        </div>
-        <h3 class="text-lg font-bold text-[#0d121b] dark:text-white">Jae Hyun Park</h3>
-        <p class="text-sm text-primary font-medium mb-2">Partner</p>
-        <p class="text-sm text-gray-500 text-center">Managing Partner | Ontario Lawyer & Notary Public.</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="w-full aspect-[3/4] rounded-lg overflow-hidden mb-6 bg-gray-200">
-          <div class="w-full h-full bg-cover bg-top hover:scale-105 transition-transform duration-500" style="background-image: url('images/TheresaWooyeonChoi_color.png');"></div>
-        </div>
-        <h3 class="text-lg font-bold text-[#0d121b] dark:text-white">Theresa Wooyeon Choi</h3>
-        <p class="text-sm text-primary font-medium mb-2">Partner</p>
-        <p class="text-sm text-gray-500 text-center">Partner | Head of Real Estate Department</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="w-full aspect-[3/4] rounded-lg overflow-hidden mb-6 bg-gray-200">
-          <div class="w-full h-full bg-cover bg-top hover:scale-105 transition-transform duration-500" style="background-image: url('images/StevenHong_color.png');"></div>
-        </div>
-        <h3 class="text-lg font-bold text-[#0d121b] dark:text-white">Steven Hong</h3>
-        <p class="text-sm text-primary font-medium mb-2">Partner</p>
-        <p class="text-sm text-gray-500 text-center">Partner | Commercial Law & Civil Litigation.</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="w-full aspect-[3/4] rounded-lg overflow-hidden mb-6 bg-gray-200">
-          <div class="w-full h-full bg-cover bg-top hover:scale-105 transition-transform duration-500" style="background-image: url('images/WarrenChan_color.png');"></div>
-        </div>
-        <h3 class="text-lg font-bold text-[#0d121b] dark:text-white">Warren Chan</h3>
-        <p class="text-sm text-primary font-medium mb-2">Partner</p>
-        <p class="text-sm text-gray-500 text-center">Lawyer | Practicing in Association.</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="w-full aspect-[3/4] rounded-lg overflow-hidden mb-6 bg-gray-200">
-          <div class="w-full h-full bg-cover bg-top hover:scale-105 transition-transform duration-500" style="background-image: url('images/ChanYeungKang_color.png');"></div>
-        </div>
-        <h3 class="text-lg font-bold text-[#0d121b] dark:text-white">Chan Yeung Kang</h3>
-        <p class="text-sm text-primary font-medium mb-2">Counsel to the Firm</p>
-        <p class="text-sm text-gray-500 text-center">Honorary Member | Retired as of July 1, 2025.</p>
-      </div>
+      @for (attorney of attorneys; track attorney.id) {
+        <a [routerLink]="['/lawyers', attorney.id]" class="flex flex-col items-center group cursor-pointer">
+          <div class="w-full aspect-[3/4] rounded-lg overflow-hidden mb-6 bg-gray-200">
+            <div class="w-full h-full bg-cover bg-top hover:scale-105 transition-transform duration-500" [style.background-image]="'url(' + attorney.image + ')'"></div>
+          </div>
+          <h3 class="text-lg font-bold text-[#0d121b] dark:text-white group-hover:text-primary transition-colors">{{ attorney.name }}</h3>
+          <p class="text-sm text-primary font-medium mb-2">{{ attorney.title }}</p>
+          <p class="text-sm text-gray-500 text-center">{{ attorney.description }}</p>
+        </a>
+      }
     </div>
   </div>
 </section>

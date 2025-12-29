@@ -21,11 +21,11 @@ export const routes: Routes = [
     component: PracticeAreasComponent
   },
   {
-    path: 'attorneys',
+    path: 'lawyers',
     component: AttorneysComponent
   },
   {
-    path: 'attorneys/:id',
+    path: 'lawyers/:id',
     component: AttorneyProfileComponent
   },
   {

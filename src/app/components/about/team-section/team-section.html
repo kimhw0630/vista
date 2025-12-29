@@ -7,49 +7,17 @@
       </p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- Team Member 1 -->
-      <div class="group relative">
-        <div class="aspect-[3/4] w-full overflow-hidden rounded-xl bg-gray-200">
-          <img alt="Portrait of John Doe, Managing Partner" class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG7pHVxvt3e09-RAemvqswe8mA288TN-xvWOA1zLRIXn3yOkN7rJC58fqXFyruQJhElLNWbLidK_LwcKIOy6-gtDDZBgEK0B0BxzuHJfhCJUfq2PzVbfgefBjVfBUHcDrtbV0cAQc8qGjQIJuZbji7HjeDq6cEkjM6DIGWAJsK4xEilAP1zm4_ltHg_JQAetNZSowCjQCYRQrftMhkOm4snjynM_fahJDaTLOwENqy2rDlA73Jts0fVo_nDuh9ORlDd_RXFBpVin8o"/>
-        </div>
-        <div class="mt-4">
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white">John Doe</h3>
-          <p class="text-sm font-medium text-primary">Managing Partner</p>
-        </div>
-      </div>
-      
-      <!-- Team Member 2 -->
-      <div class="group relative">
-        <div class="aspect-[3/4] w-full overflow-hidden rounded-xl bg-gray-200">
-          <img alt="Portrait of Sarah Smith, Senior Litigation" class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmzpq81pM5tv0ju0IYX3VXMzfbj4IFk4aMHOcr5BijQo7GpY-Y8ftZPAC2faLhCgZrejcBuS4E_cl3LFTodFsVGrdl7DZwnLL2nkrSxbnNyvGOrI5lUcnwkqeAs03cKhQIwThUghAKvK50ws-evxDHDDZwptPe6P1RF0edes1oVycnorm24ou3JhI5UDqtWc2vbAlA1X4vYWG36T_B8nXfZyEl8U5Mmg1_-q9ApcHg1L7DbCmrKQdxqIRY1EW5YefwBewW_vKSXf8Y"/>
-        </div>
-        <div class="mt-4">
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Sarah Smith</h3>
-          <p class="text-sm font-medium text-primary">Senior Litigation</p>
-        </div>
-      </div>
-      
-      <!-- Team Member 3 -->
-      <div class="group relative">
-        <div class="aspect-[3/4] w-full overflow-hidden rounded-xl bg-gray-200">
-          <img alt="Portrait of Michael Ross, Corporate Law" class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAlb7eSpLythIpT-W1YjYx2SMHsB1t_fbwMvD57thKT_hMmKabKXcb9bmoQNaLQDC68949zU72PBbmiDCt5-Ebe2tKu-O9iIuko8HlhnLcHQ2xrTTKd3DQE-sPnOk6lm7KfNTKly8r_YCR0dZ8taItlumQZqXwX9LPltLMIcrLMYdd9at0xextiX9Eo0t6E5yYZw5WmeMEqly9t7bd8Efnam2lIDcFynAhhD2b4wD_zbt1DF8GmkKWootOB_akcrPWvfZALnMiDX3x"/>
-        </div>
-        <div class="mt-4">
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Michael Ross</h3>
-          <p class="text-sm font-medium text-primary">Corporate Law</p>
-        </div>
-      </div>
-      
-      <!-- Team Member 4 -->
-      <div class="group relative">
-        <div class="aspect-[3/4] w-full overflow-hidden rounded-xl bg-gray-200">
-          <img alt="Portrait of Emily Chen, Intellectual Property" class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv4tfEH8dE8Pl6q3f-Uw3zbxbEbBXgg73N7_tksmTvYqErpZopj9RvKz64wOx_zRiKD5wO2WpvzHukyRbMWc8sQfV2Hi7PQzXEeglwZV646IP1Hqu6PP-GTR4CvvIKPgON2DNRG9hQC_PjB3hIdZ-Io1CkWCW7-Dus9AnnDyqDXya-RmiL96EOi_o1xZDgPtJTxZJWRN-5v0i4uNP9gi70zyJfFttFn7IkVzmTzAy6wi6NGhDCAkYMTOgoGYRqePob9KEMYy6a2QbB"/>
-        </div>
-        <div class="mt-4">
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Emily Chen</h3>
-          <p class="text-sm font-medium text-primary">Intellectual Property</p>
-        </div>
-      </div>
+      @for (attorney of attorneys; track attorney.id) {
+        <a [routerLink]="['/attorneys', attorney.id]" class="group relative cursor-pointer block">
+          <div class="aspect-[3/4] w-full overflow-hidden rounded-xl bg-gray-200">
+            <div class="h-full w-full bg-cover bg-top transition-transform duration-300 group-hover:scale-105" [style.background-image]="'url(' + attorney.image + ')'"></div>
+          </div>
+          <div class="mt-4">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">{{ attorney.name }}</h3>
+            <p class="text-sm font-medium text-primary">{{ attorney.title }}</p>
+          </div>
+        </a>
+      }
     </div>
   </div>
 </div>

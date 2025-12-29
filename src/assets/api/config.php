@@ -1,7 +1,6 @@
 <?php
 return [
-  'gmail_user' => 'kimhakwoo@gmail.com',
-  'gmail_pass' => 'APP_PASSWORD_HERE',
-  'site_name'  => 'My Website',
+  'site_name'  => 'VISTA Law',
+  'domain'     => 'thewellbeingcare.com',  // Change this when you move to production domain
   'owner_email'=> 'kimhakwoo@gmail.com'
 ];

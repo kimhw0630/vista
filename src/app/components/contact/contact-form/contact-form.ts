@@ -24,12 +24,14 @@ export class ContactFormComponent {
   submitMessage = '';
   submitSuccess = false;
 
-  async onSubmit(event: Event) {
+  async onSubmit(event: Event, form: any) {
     event.preventDefault();
     
-    if (!this.privacyAccepted) {
-      this.submitMessage = 'Please accept the privacy policy';
-      this.submitSuccess = false;
+    if (!form.valid) {
+      // Mark all fields as touched to show validation errors
+      Object.keys(form.controls).forEach(key => {
+        form.controls[key].markAsTouched();
+      });
       return;
     }
 

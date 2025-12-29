@@ -17,6 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
   exit(0);
 }
 
+// Enable error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 0); // Don't display errors to user
+ini_set('log_errors', 1);
+
 $data = json_decode(file_get_contents("php://input"), true);
 
 $email = filter_var($data['email'] ?? '', FILTER_VALIDATE_EMAIL);
@@ -25,7 +30,8 @@ $phone = trim($data['phone'] ?? '');
 $subject = trim($data['subject'] ?? '');
 $message = trim($data['message'] ?? '');
 
-if (!$email || !$fullName || !$message) {
+// Validate required fields (message is optional)
+if (!$email || !$fullName || !$phone || !$subject) {
   http_response_code(400);
   echo json_encode(["success" => false, "message" => "Please fill in all required fields"]);
   exit;
@@ -33,61 +39,48 @@ if (!$email || !$fullName || !$message) {
 
 try {
   // =====================
-  // Email to YOU (using GoDaddy SMTP)
+  // Email to YOU (using PHP mail function)
   // =====================
-  $mail = new PHPMailer(true);
-  $mail->isSMTP();
-  $mail->Host = 'relay-hosting.secureserver.net';
-  $mail->SMTPAuth = false;
-  $mail->Port = 25;
-
-  $mail->setFrom($config['owner_email'], $config['site_name']);
-  $mail->addAddress($config['owner_email']);
-  $mail->addReplyTo($email, $fullName);
-
-  $mail->Subject = "VISTA Contact Form - $subject";
-  $mail->Body = "
-Name: $fullName
-Email: $email
-Phone: $phone
-Subject: $subject
-
-Message:
-$message
-";
-
-  $mail->send();
+  $to = $config['owner_email'];
+  $emailSubject = "VISTA Contact Form - $subject";
+  $emailBody = "Name: $fullName\nEmail: $email\nPhone: $phone\nSubject: $subject\n\nMessage:\n$message";
+  
+  // Use a noreply address from your domain
+  $fromEmail = "noreply@{$config['domain']}";
+  
+  $headers = "From: VISTA Contact Form <$fromEmail>\r\n";
+  $headers .= "Reply-To: $fullName <$email>\r\n";
+  $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+  $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+  
+  $mailSent = mail($to, $emailSubject, $emailBody, $headers);
+  
+  if (!$mailSent) {
+    throw new Exception("Failed to send email");
+  }
 
   // =====================
-  // Auto-reply to CUSTOMER (using GoDaddy SMTP)
+  // Auto-reply to CUSTOMER
   // =====================
-  $reply = new PHPMailer(true);
-  $reply->isSMTP();
-  $reply->Host = 'relay-hosting.secureserver.net';
-  $reply->SMTPAuth = false;
-  $reply->Port = 25;
-
-  $reply->setFrom($config['owner_email'], $config['site_name']);
-  $reply->addAddress($email, $fullName);
-
-  $reply->Subject = 'We received your message';
-  $reply->Body = "
-Hi $fullName,
-
-Thank you for contacting VISTA.
-We have received your message and will get back to you within 24 hours.
-
-This is an automatic reply — no need to respond.
-
-Best regards,
-{$config['site_name']}
-";
-
-  $reply->send();
+  $customerSubject = "We received your message - {$config['site_name']}";
+  $customerBody = "Hi $fullName,\n\nThank you for contacting {$config['site_name']}.\nWe have received your message and will get back to you within 24 hours.\n\nThis is an automatic reply — no need to respond.\n\nBest regards,\n{$config['site_name']}";
+  
+  $customerHeaders = "From: {$config['site_name']} <$fromEmail>\r\n";
+  $customerHeaders .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+  $customerHeaders .= "Content-Type: text/plain; charset=UTF-8\r\n";
+  
+  mail($email, $customerSubject, $customerBody, $customerHeaders);
 
   echo json_encode(["success" => true, "message" => "Message sent successfully"]);
 
 } catch (Exception $e) {
+  // Log the actual error for debugging
+  error_log("Contact form error: " . $e->getMessage());
+  
   http_response_code(500);
-  echo json_encode(["success" => false, "message" => "Failed to send message. Please try again later."]);
+  echo json_encode([
+    "success" => false, 
+    "message" => "Failed to send message. Please try again later.",
+    "error" => $e->getMessage() // Include error for debugging (remove in production)
+  ]);
 }

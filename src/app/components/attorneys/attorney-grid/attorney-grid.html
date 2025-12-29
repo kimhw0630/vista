@@ -1,195 +1,46 @@
 <div class="w-full max-w-[1280px] px-4 md:px-10 mx-auto py-8">
-  <h2 class="text-3xl font-bold text-[#0d121b] dark:text-white mb-8">Our Attorneys</h2>
+  <h2 class="text-3xl font-bold text-[#0d121b] dark:text-white mb-8">Our Lawyers</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-12">
-    <!-- Card 1 -->
-    <div class="group flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e7ebf3] dark:border-[#2a3441] overflow-hidden hover:border-primary/50 hover:shadow-lg dark:hover:border-primary/50 transition-all duration-300">
-      <div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
-        <div class="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
-          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIl7Xa2Pk4ge_OQyGYufy4NksfiL0lDSWEohk6nl9cCYq2f9taI0rzoOo8ROACyYfaedAXP3lJXb22jPfdDMCIy76DdveA8cDkMVBiUOEDis73Aqp9yQw1XOl8kqK8wsVDW573uhszKGXyQRHfs6ncAkReayO5JEcJeZQzKe6oI501Lk6luJYNt7mvuFw-UfPKmJsHwGFoawuTqmzqH7Uet9JkmCeQs9IGDLxFpYuzOV36X3jt0K20OUeEHvwJTKl0acelxetxJQhi');"></div>
-      </div>
-      <div class="flex flex-col p-5 gap-4 flex-1">
-        <div>
-          <h3 class="text-xl font-bold text-[#0d121b] dark:text-white group-hover:text-primary transition-colors">James Sterling</h3>
-          <p class="text-sm font-medium text-[#4c669a] dark:text-[#94a3b8]">Senior Partner</p>
+    @for (attorney of attorneys; track attorney.id) {
+      <div class="group flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e7ebf3] dark:border-[#2a3441] overflow-hidden hover:border-primary/50 hover:shadow-lg dark:hover:border-primary/50 transition-all duration-300">
+        <div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
+          <div class="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
+            [style.background-image]="'url(' + attorney.image + ')'"></div>
         </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="inline-flex items-center rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">Corporate</span>
-          <span class="inline-flex items-center rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">M&A</span>
-        </div>
-        <div class="mt-auto pt-4 flex items-center justify-between border-t border-[#e7ebf3] dark:border-[#2a3441]">
-          <div class="flex gap-3">
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">mail</span>
-            </a>
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">call</span>
-            </a>
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">link</span>
-            </a>
+        <div class="flex flex-col p-5 gap-4 flex-1">
+          <div>
+            <h3 class="text-xl font-bold text-[#0d121b] dark:text-white group-hover:text-primary transition-colors">{{ attorney.name }}</h3>
+            <p class="text-sm font-medium text-[#4c669a] dark:text-[#94a3b8]">{{ attorney.title }}</p>
           </div>
-          <a routerLink="/attorneys/james-sterling" class="text-sm font-bold text-primary hover:text-primary-dark hover:underline cursor-pointer">View Profile</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="group flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e7ebf3] dark:border-[#2a3441] overflow-hidden hover:border-primary/50 hover:shadow-lg dark:hover:border-primary/50 transition-all duration-300">
-      <div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
-        <div class="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
-          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAN35D8Ku_axPH2W82je7swuv_y6Kwirdj6KoD3g2ScDoEqUhLT99cVEKlXNu5Guv1QJJY2wp4R9kpGd3CqtpiSJV22LXo-JkQjCDnysC6NhjS5GkkK9MPQYxsc4oAAcysqMTw870p0spCx-ALifwgNUy59M4d-_kpoNRWhEsVDg2i92zGg7OEMC2InwTvKJ0ENeU0RjfIppMIUS0tEVPwL1xZhLwPfl-C37xLlvp6hn599p1B0d8qQRKpxKrHVLqPZNXOyCHNkqlCK');"></div>
-      </div>
-      <div class="flex flex-col p-5 gap-4 flex-1">
-        <div>
-          <h3 class="text-xl font-bold text-[#0d121b] dark:text-white group-hover:text-primary transition-colors">Elena Rodriguez</h3>
-          <p class="text-sm font-medium text-[#4c669a] dark:text-[#94a3b8]">Head of Litigation</p>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="inline-flex items-center rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">Litigation</span>
-          <span class="inline-flex items-center rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">Civil Rights</span>
-        </div>
-        <div class="mt-auto pt-4 flex items-center justify-between border-t border-[#e7ebf3] dark:border-[#2a3441]">
-          <div class="flex gap-3">
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">mail</span>
-            </a>
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">call</span>
-            </a>
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">link</span>
-            </a>
+          @if (attorney.specialties && attorney.specialties.length > 0) {
+            <div class="flex flex-wrap gap-2">
+              @for (specialty of attorney.specialties; track specialty) {
+                <span class="inline-flex items-center rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">{{ specialty }}</span>
+              }
+            </div>
+          }
+          <div class="mt-auto pt-4 flex items-center justify-between border-t border-[#e7ebf3] dark:border-[#2a3441]">
+            <div class="flex gap-3">
+              @if (attorney.email) {
+                <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" [href]="'mailto:' + attorney.email">
+                  <span class="material-symbols-outlined text-[20px]">mail</span>
+                </a>
+              }
+              @if (attorney.phone) {
+                <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" [href]="'tel:' + attorney.phone">
+                  <span class="material-symbols-outlined text-[20px]">call</span>
+                </a>
+              }
+              @if (attorney.linkedin) {
+                <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" [href]="attorney.linkedin" target="_blank">
+                  <span class="material-symbols-outlined text-[20px]">link</span>
+                </a>
+              }
+            </div>
+            <a [routerLink]="['/lawyers', attorney.id]" class="text-sm font-bold text-primary hover:text-primary-dark hover:underline cursor-pointer">View Profile</a>
           </div>
-          <a routerLink="/attorneys/elena-rodriguez" class="text-sm font-bold text-primary hover:text-primary-dark hover:underline cursor-pointer">View Profile</a>
         </div>
       </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="group flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e7ebf3] dark:border-[#2a3441] overflow-hidden hover:border-primary/50 hover:shadow-lg dark:hover:border-primary/50 transition-all duration-300">
-      <div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
-        <div class="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
-          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC30TxSyfVL4nHYATZQzd3Hrjyhd-aLkR4Gn51ZPFtOWAVolcmjq2-ITHk7so6ywe07meFB8BKZmKvw9XKrHuOjkhZDA8Ei9M2AKVmm6aRQctaPjRus3Wo--ugvYNUFkKtXwqG3A1C90VyZZqq3YP3Hx5LOOOt4QuaI8y64Z02NCnxq8F6gevGDnKImoTUD4QqnaSSmedQR9c3LKIRu6si7QVnFWm5eLmDRlFXNC3Ok_X6DljUV--5BBffUYOhVHJbhUT2mUJ1py1K4');"></div>
-      </div>
-      <div class="flex flex-col p-5 gap-4 flex-1">
-        <div>
-          <h3 class="text-xl font-bold text-[#0d121b] dark:text-white group-hover:text-primary transition-colors">Michael Chen</h3>
-          <p class="text-sm font-medium text-[#4c669a] dark:text-[#94a3b8]">Associate</p>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="inline-flex items-center rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">IP Law</span>
-          <span class="inline-flex items-center rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">Tech</span>
-        </div>
-        <div class="mt-auto pt-4 flex items-center justify-between border-t border-[#e7ebf3] dark:border-[#2a3441]">
-          <div class="flex gap-3">
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">mail</span>
-            </a>
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">call</span>
-            </a>
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">link</span>
-            </a>
-          </div>
-          <a routerLink="/attorneys/michael-chen" class="text-sm font-bold text-primary hover:text-primary-dark hover:underline cursor-pointer">View Profile</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="group flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e7ebf3] dark:border-[#2a3441] overflow-hidden hover:border-primary/50 hover:shadow-lg dark:hover:border-primary/50 transition-all duration-300">
-      <div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
-        <div class="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
-          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWOxAZ9coEvxBhGco8iQ7PHefr0zy70EKI0OHoOnRS_4OVDvLmHTcIohSgFjgMWGN3Gv1oz0nJBgecfBheRxiZX5kJdQa9AZG0_4M8FNX8r_fp7YhkF4uuoZdirVwu8Kb-25W2Kfcs38hXZI3o16HiqO344S5-PaILip5nnE2wtoVFVxBZLOzuMM4fmVhLI8kl-7rajN9xbcEX8M9BeQ5xmJy_QOn_aFWZkTNGnUUW9NntLgYXSY5eTm5C7O-OMKrcK2ye0majq5v5');"></div>
-      </div>
-      <div class="flex flex-col p-5 gap-4 flex-1">
-        <div>
-          <h3 class="text-xl font-bold text-[#0d121b] dark:text-white group-hover:text-primary transition-colors">Sarah Jenkins</h3>
-          <p class="text-sm font-medium text-[#4c669a] dark:text-[#94a3b8]">Partner</p>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="inline-flex items-center rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">Family Law</span>
-          <span class="inline-flex items-center rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">Mediation</span>
-        </div>
-        <div class="mt-auto pt-4 flex items-center justify-between border-t border-[#e7ebf3] dark:border-[#2a3441]">
-          <div class="flex gap-3">
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">mail</span>
-            </a>
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">call</span>
-            </a>
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">link</span>
-            </a>
-          </div>
-          <a routerLink="/attorneys/sarah-jenkins" class="text-sm font-bold text-primary hover:text-primary-dark hover:underline cursor-pointer">View Profile</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="group flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e7ebf3] dark:border-[#2a3441] overflow-hidden hover:border-primary/50 hover:shadow-lg dark:hover:border-primary/50 transition-all duration-300">
-      <div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
-        <div class="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
-          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUzfCw0svzOL7Qs37iMmBDlAsMJv397yrhHh9Yp9lTlVr0sIGYATbnoqjN0HuCtSLmyt1nrN-fp5mRHoMVh1V5PcDu3v6aXk-3rTn7uJnXrj2lITsmfZsJnVRo4vwID_j0CzcZ6kjsG-010rHrdSNZVjtJnpCkyG2gAVlAeG_YH1uVtHxVdcK830w7ivYCAl-5NMY6L5cA1uh_WnWo53pfCSVkoYcQvRJzCzFxuzUoev_gBQqIz1S6PN1nTJQepkJPcLaz26FMUUuZ');"></div>
-      </div>
-      <div class="flex flex-col p-5 gap-4 flex-1">
-        <div>
-          <h3 class="text-xl font-bold text-[#0d121b] dark:text-white group-hover:text-primary transition-colors">David Ross</h3>
-          <p class="text-sm font-medium text-[#4c669a] dark:text-[#94a3b8]">Senior Associate</p>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="inline-flex items-center rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">Real Estate</span>
-        </div>
-        <div class="mt-auto pt-4 flex items-center justify-between border-t border-[#e7ebf3] dark:border-[#2a3441]">
-          <div class="flex gap-3">
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">mail</span>
-            </a>
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">call</span>
-            </a>
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">link</span>
-            </a>
-          </div>
-          <a routerLink="/attorneys/david-ross" class="text-sm font-bold text-primary hover:text-primary-dark hover:underline cursor-pointer">View Profile</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="group flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e7ebf3] dark:border-[#2a3441] overflow-hidden hover:border-primary/50 hover:shadow-lg dark:hover:border-primary/50 transition-all duration-300">
-      <div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
-        <div class="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
-          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAY0bAkZgQnlv6xxOc3cXnPaB4rdAtJvO3EyOXhm5xWFfztkGvG1YDv9ctieYJy8liWczfd8BTNv-GgJJ3pGZGh6xkcu23pevRyWaaDefDLZ_Dxr606F5lHzkgIpEzV9XtTP3ZrWHK3-zYNeCUvmX0lFrXyhm48TEn8sosSTAh2YoRNlXo4mFYNrKWe7tEWW-RpeXfmhhhA2w-JnnU4OVbdGqr_FD_nxP2LXBbCLXpSRWptthmmMMFeZpPIkwjV9JT3TUj0t-r15w4b');"></div>
-      </div>
-      <div class="flex flex-col p-5 gap-4 flex-1">
-        <div>
-          <h3 class="text-xl font-bold text-[#0d121b] dark:text-white group-hover:text-primary transition-colors">Amanda Cole</h3>
-          <p class="text-sm font-medium text-[#4c669a] dark:text-[#94a3b8]">Of Counsel</p>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="inline-flex items-center rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">Tax Law</span>
-          <span class="inline-flex items-center rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">Compliance</span>
-        </div>
-        <div class="mt-auto pt-4 flex items-center justify-between border-t border-[#e7ebf3] dark:border-[#2a3441]">
-          <div class="flex gap-3">
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">mail</span>
-            </a>
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">call</span>
-            </a>
-            <a class="text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors" href="#">
-              <span class="material-symbols-outlined text-[20px]">link</span>
-            </a>
-          </div>
-          <a routerLink="/attorneys/amanda-cole" class="text-sm font-bold text-primary hover:text-primary-dark hover:underline cursor-pointer">View Profile</a>
-        </div>
-      </div>
-    </div>
+    }
   </div>
 </div>
