@@ -39,10 +39,15 @@
           <select #subject="ngModel" class="w-full h-12 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-4 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
             id="subject" name="subject" [(ngModel)]="formData.subject" required>
             <option disabled selected value="">Select practice area</option>
-            <option value="Personal Injury">Personal Injury</option>
-            <option value="Family Law">Family Law</option>
-            <option value="Criminal Defense">Criminal Defense</option>
-            <option value="Corporate Law">Corporate Law</option>
+            <option value="Corporate & Business">Corporate & Business</option>
+            <option value="Real Estate">Real Estate</option>
+            <option value="Civil & Commercial Litigation">Civil & Commercial Litigation</option>
+            <option value="Employment Law">Employment Law</option>
+             <option value="Wills & Estates">Wills & Estates</option>
+              <option value="Dental / Health Law">Dental / Health Law</option>
+               <option value="Referral Services">Referral Services</option>
+                <option value="Leasing">Leasing</option>
+                <option value="Immigration Law">Immigration Law</option>
             <option value="Other">Other</option>
           </select>
           <span *ngIf="subject.invalid && subject.touched" class="text-xs text-red-600 dark:text-red-400">Please select a practice area</span>

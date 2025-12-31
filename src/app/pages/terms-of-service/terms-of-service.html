@@ -1,0 +1,215 @@
+<main class="flex-grow flex flex-col items-center w-full px-4 sm:px-6 md:px-8 py-8 md:py-12">
+  <div class="w-full max-w-6xl flex flex-col lg:flex-row gap-12">
+    <!-- Sidebar Navigation (Sticky) -->
+    <aside class="hidden lg:block w-64 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex flex-col gap-1 mb-4">
+            <h3 class="text-slate-900 dark:text-white text-sm font-bold uppercase tracking-wider">Contents</h3>
+            <p class="text-slate-500 dark:text-slate-400 text-xs">Jump to a section</p>
+          </div>
+          <nav class="flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors text-sm border-l-2 border-transparent cursor-pointer" (click)="scrollToSection('introduction')">
+              <span>1. Introduction</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors text-sm border-l-2 border-transparent cursor-pointer" (click)="scrollToSection('definitions')">
+              <span>2. Definitions</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors text-sm border-l-2 border-transparent cursor-pointer" (click)="scrollToSection('responsibilities')">
+              <span>3. User Responsibilities</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors text-sm border-l-2 border-transparent cursor-pointer" (click)="scrollToSection('intellectual-property')">
+              <span>4. Intellectual Property</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors text-sm border-l-2 border-transparent cursor-pointer" (click)="scrollToSection('disclaimers')">
+              <span>5. Disclaimers</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors text-sm border-l-2 border-transparent cursor-pointer" (click)="scrollToSection('dispute-resolution')">
+              <span>6. Dispute Resolution</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors text-sm border-l-2 border-transparent cursor-pointer" (click)="scrollToSection('contact')">
+              <span>7. Contact Us</span>
+            </a>
+          </nav>
+        </div>
+        <!-- Quick Contact Card -->
+        <div class="bg-primary text-white rounded-xl p-5 shadow-lg relative overflow-hidden group">
+          <div class="absolute top-0 right-0 -mt-2 -mr-2 w-16 h-16 bg-white/10 rounded-full blur-xl group-hover:bg-white/20 transition-all"></div>
+          <div class="relative z-10">
+            <h4 class="font-bold mb-2">Need legal help?</h4>
+            <p class="text-sm text-blue-100 mb-4">Our team is available to discuss your specific situation.</p>
+            <a routerLink="/contact" class="block w-full py-2 bg-white text-primary rounded-lg text-sm font-bold hover:bg-blue-50 transition-colors text-center cursor-pointer">
+              Contact Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Content Area -->
+    <div class="flex-1 min-w-0">
+      <!-- Page Heading -->
+      <div class="mb-8">
+        <h1 class="text-slate-900 dark:text-white text-4xl lg:text-5xl font-black leading-tight tracking-tight mb-2">Terms of Service</h1>
+        <p class="text-slate-500 dark:text-slate-400 text-base">Effective Date: December 30, 2025</p>
+      </div>
+
+      <!-- Sections Container -->
+      <div class="flex flex-col gap-8">
+        <!-- Section 1 -->
+        <section class="bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 dark:border-slate-800 scroll-mt-24" id="introduction">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary font-bold text-sm">1</div>
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Introduction</h2>
+          </div>
+          <div class="prose prose-slate dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 leading-relaxed">
+            <p class="mb-4">
+              Welcome to VISTA Law. These Terms of Service ("Terms") govern your access to and use of our website, services, and applications (collectively, the "Services"). By accessing or using our Services, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our Services.
+            </p>
+            <p>
+              We reserve the right to modify these Terms at any time. If we make changes, we will notify you by revising the date at the top of the policy and, in some cases, we may provide you with additional notice (such as adding a statement to our homepage or sending you a notification).
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 dark:border-slate-800 scroll-mt-24" id="definitions">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="flex items-center justify-center size-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold text-sm">2</div>
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Definitions</h2>
+          </div>
+          <div class="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div class="flex gap-4 p-4 rounded-lg bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800">
+              <span class="material-symbols-outlined text-primary mt-1">gavel</span>
+              <div>
+                <span class="font-bold text-slate-900 dark:text-white block mb-1">"Service"</span>
+                <p class="text-sm">Refers to the legal consultation, document preparation, and other services provided by VISTA Law through this website.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 p-4 rounded-lg bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800">
+              <span class="material-symbols-outlined text-primary mt-1">person</span>
+              <div>
+                <span class="font-bold text-slate-900 dark:text-white block mb-1">"User"</span>
+                <p class="text-sm">Refers to any individual or entity that accesses or uses the Service, including but not limited to clients and potential clients.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 p-4 rounded-lg bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800">
+              <span class="material-symbols-outlined text-primary mt-1">folder_shared</span>
+              <div>
+                <span class="font-bold text-slate-900 dark:text-white block mb-1">"Content"</span>
+                <p class="text-sm">Means text, graphics, images, music, software, audio, video, works of authorship of any kind, and information or other materials that are posted, generated, provided or otherwise made available through the Services.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 dark:border-slate-800 scroll-mt-24" id="responsibilities">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="flex items-center justify-center size-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold text-sm">3</div>
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">User Responsibilities</h2>
+          </div>
+          <div class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            <p class="mb-4">You are responsible for your use of the Services and for any content you provide, including compliance with applicable laws, rules, and regulations. You specifically agree not to:</p>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-red-500 shrink-0">block</span>
+                <span>Use the Services for any illegal purpose or in violation of any local, state, national, or international law.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-red-500 shrink-0">block</span>
+                <span>Violate, or encourage others to violate, any right of a third party, including by infringing or misappropriating any third-party intellectual property right.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-red-500 shrink-0">block</span>
+                <span>Interfere with security-related features of the Services, including by disabling or circumventing features that prevent or limit use or copying of any content.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-red-500 shrink-0">block</span>
+                <span>Access, search, or otherwise use any portion of the Services through the use of any engine, software, tool, agent, device, or mechanism (including spiders, robots, crawlers, and data mining tools).</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 dark:border-slate-800 scroll-mt-24" id="intellectual-property">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="flex items-center justify-center size-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold text-sm">4</div>
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Intellectual Property</h2>
+          </div>
+          <div class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            <p class="mb-4">
+              The Services and original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of VISTA Law and its licensors. The Services are protected by copyright, trademark, and other laws of both Canada and foreign countries.
+            </p>
+            <p>
+              Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of VISTA Law.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 dark:border-slate-800 scroll-mt-24" id="disclaimers">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="flex items-center justify-center size-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold text-sm">5</div>
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Disclaimers & Limitations</h2>
+          </div>
+          <div class="p-4 bg-orange-50 dark:bg-orange-900/10 border-l-4 border-orange-400 rounded-r-lg mb-6">
+            <h4 class="font-bold text-orange-800 dark:text-orange-200 mb-1">Important Legal Notice</h4>
+            <p class="text-sm text-orange-700 dark:text-orange-300">
+              The information provided on this website does not, and is not intended to, constitute legal advice; instead, all information, content, and materials available on this site are for general informational purposes only.
+            </p>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            IN NO EVENT WILL VISTA LAW, OR ITS AFFILIATES OR THEIR LICENSORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS OR DIRECTORS BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE WEBSITE, ANY WEBSITES LINKED TO IT, ANY CONTENT ON THE WEBSITE OR SUCH OTHER WEBSITES OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE.
+          </p>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 dark:border-slate-800 scroll-mt-24" id="dispute-resolution">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="flex items-center justify-center size-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold text-sm">6</div>
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Dispute Resolution</h2>
+          </div>
+          <div class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            <p class="mb-4">
+              <strong>Binding Arbitration.</strong> Except for any disputes, claims, suits, actions, causes of action, demands or proceedings (collectively, "Disputes") in which either party seeks to bring an individual action in small claims court or seeks injunctive or other equitable relief for the alleged unlawful use of intellectual property, you and VISTA Law agree (a) to waive your and VISTA Law's respective rights to have any and all Disputes arising from or related to these Terms, or the Services, resolved in a court, and (b) to waive your and VISTA Law's respective rights to a jury trial.
+            </p>
+            <p>
+              Instead, you and VISTA Law agree to arbitrate Disputes through binding arbitration (which is the referral of a Dispute to one or more persons charged with reviewing the Dispute and making a final and binding determination to resolve it instead of having the Dispute decided by a judge or jury in court).
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="bg-primary/5 dark:bg-primary/10 rounded-2xl p-6 md:p-8 shadow-sm border border-primary/10 scroll-mt-24" id="contact">
+          <div class="flex flex-col gap-6">
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="flex items-center justify-center size-8 rounded-full bg-primary text-white font-bold text-sm">7</div>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Contact Us</h2>
+              </div>
+              <p class="text-slate-600 dark:text-slate-300 mb-6">
+                If you have any questions about these Terms, please contact us. We are committed to clarity and transparency in all our client relationships.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-center gap-3 text-slate-700 dark:text-slate-200">
+                  <span class="material-symbols-outlined text-primary">location_on</span>
+                  <span>26 Glen Cameron Road, Markham, ON L6C 1Y1</span>
+                </div>
+                <div class="flex items-center gap-3 text-slate-700 dark:text-slate-200">
+                  <span class="material-symbols-outlined text-primary">email</span>
+                  <a class="hover:text-primary transition-colors" href="mailto:info@vistallp.ca">info@vistallp.ca</a>
+                </div>
+                <div class="flex items-center gap-3 text-slate-700 dark:text-slate-200">
+                  <span class="material-symbols-outlined text-primary">call</span>
+                  <span>(905) 886-3339</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>

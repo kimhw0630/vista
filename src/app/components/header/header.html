@@ -1,16 +1,14 @@
 <header class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur">
   <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="flex items-center justify-center size-8 rounded bg-primary/10 text-primary">
-          <span class="material-symbols-outlined">balance</span>
-        </div>
-        <h1 class="text-xl font-bold tracking-tight text-[#0d121b] dark:text-white">VISTA</h1>
-      </div>
+      <a routerLink="/" class="flex items-center gap-3 cursor-pointer">
+        <img src="images/logo_blue2.svg" alt="VISTA Law Logo" class="h-10 w-auto">
+        <!-- <h1 class="text-xl font-bold tracking-tight text-[#0d121b] dark:text-white">VISTA</h1> -->
+      </a>
       <nav class="hidden md:flex items-center gap-8">
         <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}">Home</a>
         <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/practice-areas" routerLinkActive="text-primary">Practice Areas</a>
-        <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/lawyers" routerLinkActive="text-primary">Lawyers</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/lawyers" routerLinkActive="text-primary">Lawyers & Team</a>
         <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/about" routerLinkActive="text-primary">About Us</a>
         <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/contact" routerLinkActive="text-primary">Contact Us</a>
       </nav>
@@ -26,16 +24,18 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div *ngIf="mobileMenuOpen" class="md:hidden border-t border-gray-200 dark:border-gray-800 bg-background-light dark:bg-background-dark">
-    <nav class="flex flex-col px-4 py-4 space-y-3">
-      <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}">Home</a>
-      <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/practice-areas" routerLinkActive="text-primary">Practice Areas</a>
-      <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/attorneys" routerLinkActive="text-primary">Attorneys</a>
-      <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/about" routerLinkActive="text-primary">About Us</a>
-      <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/contact" routerLinkActive="text-primary">Contact Us</a>
-      <button class="mt-2 flex items-center justify-center h-10 px-5 bg-primary hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-sm">
-        Free Consultation
-      </button>
-    </nav>
-  </div>
+  @if (mobileMenuOpen) {
+    <div class="md:hidden border-t border-gray-200 dark:border-gray-800 bg-background-light dark:bg-background-dark">
+      <nav class="flex flex-col px-4 py-4 space-y-3">
+        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/practice-areas" routerLinkActive="text-primary">Practice Areas</a>
+        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/lawyers" routerLinkActive="text-primary">Lawyers & Team</a>
+        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/about" routerLinkActive="text-primary">About Us</a>
+        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/contact" routerLinkActive="text-primary">Contact Us</a>
+        <button class="mt-2 flex items-center justify-center h-10 px-5 bg-primary hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-sm">
+          Free Consultation
+        </button>
+      </nav>
+    </div>
+  }
 </header>

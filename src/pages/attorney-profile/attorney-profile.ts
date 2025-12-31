@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { AttorneyService, Attorney } from '../../app/services/attorney.service';
+import { SeoService } from '../../app/services/seo.service';
 
 @Component({
   selector: 'app-attorney-profile',
@@ -16,7 +17,8 @@ export class AttorneyProfileComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private attorneyService: AttorneyService
+    private attorneyService: AttorneyService,
+    private seoService: SeoService
   ) {}
 
   ngOnInit() {
@@ -28,6 +30,9 @@ export class AttorneyProfileComponent implements OnInit {
       // If attorney not found, redirect to lawyers page
       if (!this.attorney) {
         this.router.navigate(['/lawyers']);
+      } else {
+        // Update SEO for this attorney
+        this.updateSeo();
       }
     });
 
@@ -36,6 +41,40 @@ export class AttorneyProfileComponent implements OnInit {
       if (params['returnUrl']) {
         this.returnUrl = params['returnUrl'];
       }
+    });
+  }
+
+  updateSeo() {
+    if (!this.attorney) return;
+
+    this.seoService.updateMetaTags({
+      title: `${this.attorney.name} - ${this.attorney.title} | VISTA Law`,
+      description: this.attorney.description,
+      keywords: `${this.attorney.name}, ${this.attorney.title}, ${this.attorney.specialties?.join(', ')}, lawyer Toronto`,
+      url: `https://vistallp.ca/lawyers/${this.attorney.id}`,
+      image: this.attorney.image
+    });
+
+    // Add structured data for the attorney
+    this.seoService.addStructuredData({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      'name': this.attorney.name,
+      'jobTitle': this.attorney.title,
+      'description': this.attorney.description,
+      'image': this.attorney.image,
+      'email': this.attorney.email,
+      'telephone': this.attorney.phone,
+      'url': `https://vistallp.ca/lawyers/${this.attorney.id}`,
+      'worksFor': {
+        '@type': 'LegalService',
+        'name': 'VISTA Law'
+      },
+      'knowsAbout': this.attorney.specialties,
+      'alumniOf': this.attorney.education?.map(edu => ({
+        '@type': 'EducationalOrganization',
+        'name': edu.school
+      }))
     });
   }
 

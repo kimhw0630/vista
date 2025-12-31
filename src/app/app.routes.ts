@@ -6,6 +6,8 @@ import { AttorneysComponent } from './pages/attorneys/attorneys';
 import { ContactComponent } from './pages/contact/contact';
 import { AttorneyProfileComponent } from '../pages/attorney-profile/attorney-profile';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy';
+import { DisclaimerComponent } from './pages/disclaimer/disclaimer';
+import { TermsOfServiceComponent } from './pages/terms-of-service/terms-of-service';
 
 export const routes: Routes = [
   {
@@ -35,5 +37,13 @@ export const routes: Routes = [
   {
     path: 'privacy-policy',
     component: PrivacyPolicyComponent
+  },
+  {
+    path: 'disclaimer',
+    component: DisclaimerComponent
+  },
+  {
+    path: 'terms-of-service',
+    component: TermsOfServiceComponent
   }
 ];

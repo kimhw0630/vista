@@ -9,9 +9,9 @@
           <span class="material-symbols-outlined text-[16px]">mail</span>
           <span>{{ clerk.email }}</span>
         </a>
-        <a [href]="'tel:' + clerk.phone" class="flex items-center gap-2 text-sm text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors">
+        <a [href]="'tel:' + clerk.phone.replace(/[^0-9+]/g, '') + (clerk.ext ? ';' + clerk.ext : '')" class="flex items-center gap-2 text-sm text-[#4c669a] dark:text-[#94a3b8] hover:text-primary transition-colors">
           <span class="material-symbols-outlined text-[16px]">call</span>
-          <span>{{ clerk.phone }}</span>
+          <span>{{ clerk.phone }}@if (clerk.ext) { <span> ext. {{ clerk.ext }}</span> }</span>
         </a>
       </div>
     </div>

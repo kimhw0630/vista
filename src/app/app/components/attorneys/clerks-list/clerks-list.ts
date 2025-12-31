@@ -10,17 +10,17 @@ import { CommonModule } from '@angular/common';
 })
 export class ClerksList {
   clerks = [
-    { name: 'Jennifer Martinez', position: 'Office Manager', email: 'j.martinez@vista.law', phone: '(212) 555-0150' },
-    { name: 'Robert Thompson', position: 'Legal Secretary', email: 'r.thompson@vista.law', phone: '(212) 555-0151' },
-    { name: 'Lisa Anderson', position: 'Paralegal', email: 'l.anderson@vista.law', phone: '(212) 555-0152' },
-    { name: 'William Davis', position: 'Court Clerk', email: 'w.davis@vista.law', phone: '(212) 555-0153' },
-    { name: 'Maria Garcia', position: 'Administrative Assistant', email: 'm.garcia@vista.law', phone: '(212) 555-0154' },
-    { name: 'James Wilson', position: 'Legal Assistant', email: 'j.wilson@vista.law', phone: '(212) 555-0155' },
-    { name: 'Patricia Brown', position: 'Office Coordinator', email: 'p.brown@vista.law', phone: '(212) 555-0156' },
-    { name: 'Christopher Lee', position: 'Records Clerk', email: 'c.lee@vista.law', phone: '(212) 555-0157' },
-    { name: 'Nancy White', position: 'Receptionist', email: 'n.white@vista.law', phone: '(212) 555-0158' },
-    { name: 'Daniel Harris', position: 'File Clerk', email: 'd.harris@vista.law', phone: '(212) 555-0159' },
-    { name: 'Karen Taylor', position: 'Legal Secretary', email: 'k.taylor@vista.law', phone: '(212) 555-0160' },
-    { name: 'Steven Moore', position: 'Office Assistant', email: 's.moore@vista.law', phone: '(212) 555-0161' }
+    { name: 'Sandy Jin', position: 'Office Manager (for Immigration Department)', email: 'sandy@vistallp.ca', phone: '(416) 733-2187' },
+    { name: 'Ivy Park', position: 'Administrative Assistant', email: 'ivy@vistallp.ca', phone: '(905) 886-3339', ext:'232' },
+    { name: 'Grace Choi', position: 'Client Relations Coordinator', email: 'grace@vistallp.ca', phone: '(905) 886-3339', ext:'227' },
+    { name: 'Jessica Lee', position: 'Office Manager', email: 'jessica@vistallp.ca', phone: '(905) 886-3339', ext:'225' },
+    { name: 'Jina Yoo', position: 'Senior Law Clerk', email: 'jina@vistallp.ca', phone: '(905) 886-3339', ext:'228' },
+    { name: 'Lucy Jo', position: 'Law Clerk', email: 'lucy@vistallp.ca', phone: '(905) 886-3339', ext:'226' },
+    { name: 'Yan Wei', position: 'Senior Law Clerk', email: 'yan@vistallp.ca  ', phone: '(905) 886-3339', ext:'224' },
+    { name: 'Jia Shin', position: 'Junior Law Clerk', email: 'jia@vistallp.ca', phone: '(905) 886-3339', ext:'230' },
+    { name: 'Alicia Cha', position: 'Senior Law Clerk', email: 'alicia@vistallp.ca', phone: '(905) 886-3339', ext:'231' },
+    { name: 'Sue Ghang', position: 'Law Clerk', email: 'sg@vistallp.ca ', phone: '(905) 886-3339', ext:'235' },
+    { name: 'Sunny Park', position: 'Law Clerk', email: 'sunny@vistallp.ca', phone: '(905) 886-3339', ext:'236' },
+    { name: 'Eunice Shin', position: 'Law Clerk', email: 'eunice@vistallp.ca', phone: '(905) 886-3339', ext:'237' }
   ];
 }
