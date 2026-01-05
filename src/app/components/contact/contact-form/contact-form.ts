@@ -42,15 +42,19 @@ export class ContactFormComponent {
       const response = await fetch('/assets/api/contact_godaddy.php', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json; charset=UTF-8'
         },
         body: JSON.stringify(this.formData)
       });
 
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const result = await response.json();
       
       if (result.success) {
-        this.submitMessage = result.message;
+        this.submitMessage = result.message || 'Thank you for contacting us. We will get back to you soon!';
         this.submitSuccess = true;
         // Reset form
         this.formData = {
@@ -61,12 +65,14 @@ export class ContactFormComponent {
           message: ''
         };
         this.privacyAccepted = false;
+        form.resetForm();
       } else {
-        this.submitMessage = result.message;
+        this.submitMessage = result.message || 'Failed to send message. Please try again.';
         this.submitSuccess = false;
       }
     } catch (error) {
-      this.submitMessage = 'An error occurred. Please try again later.';
+      console.error('Contact form error:', error);
+      this.submitMessage = 'An error occurred. Please try again later or call us directly at (905) 886-3339.';
       this.submitSuccess = false;
     } finally {
       this.isSubmitting = false;

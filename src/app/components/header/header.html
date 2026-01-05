@@ -2,7 +2,7 @@
   <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <a routerLink="/" class="flex items-center gap-3 cursor-pointer">
-        <img src="images/logo_blue2.svg" alt="VISTA Law Logo" class="h-10 w-auto">
+        <img src="images/logo_blue2.svg" alt="VISTA Law Logo" class="h-12 w-auto">
         <!-- <h1 class="text-xl font-bold tracking-tight text-[#0d121b] dark:text-white">VISTA</h1> -->
       </a>
       <nav class="hidden md:flex items-center gap-8">
@@ -13,9 +13,9 @@
         <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/contact" routerLinkActive="text-primary">Contact Us</a>
       </nav>
       <div class="flex items-center gap-4">
-        <button class="hidden sm:flex items-center justify-center h-10 px-5 bg-primary hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-sm" routerLink="/contact">
+        <a routerLink="/contact" class="hidden sm:flex items-center justify-center h-10 px-5 bg-primary hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-sm cursor-pointer">
           Free Consultation
-        </button>
+        </a>
         <button (click)="toggleMobileMenu()" class="md:hidden p-2 text-gray-600 dark:text-gray-300">
           <span class="material-symbols-outlined">{{ mobileMenuOpen ? 'close' : 'menu' }}</span>
         </button>
@@ -32,9 +32,9 @@
         <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/lawyers" routerLinkActive="text-primary">Lawyers & Team</a>
         <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/about" routerLinkActive="text-primary">About Us</a>
         <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/contact" routerLinkActive="text-primary">Contact Us</a>
-        <button class="mt-2 flex items-center justify-center h-10 px-5 bg-primary hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-sm">
+        <a (click)="closeMobileMenu()" routerLink="/contact" class="mt-2 flex items-center justify-center h-10 px-5 bg-primary hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-sm">
           Free Consultation
-        </button>
+        </a>
       </nav>
     </div>
   }
