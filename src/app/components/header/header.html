@@ -6,15 +6,16 @@
         <!-- <h1 class="text-xl font-bold tracking-tight text-[#0d121b] dark:text-white">VISTA</h1> -->
       </a>
       <nav class="hidden md:flex items-center gap-8">
-        <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}">Home</a>
-        <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/practice-areas" routerLinkActive="text-primary">Practice Areas</a>
-        <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/lawyers" routerLinkActive="text-primary">Lawyers & Team</a>
-        <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/about" routerLinkActive="text-primary">About Us</a>
-        <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/contact" routerLinkActive="text-primary">Contact Us</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}">{{ 'header.home' | translate }}</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/practice-areas" routerLinkActive="text-primary">{{ 'header.practiceAreas' | translate }}</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/lawyers" routerLinkActive="text-primary">{{ 'header.attorneys' | translate }}</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/about" routerLinkActive="text-primary">{{ 'header.about' | translate }}</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" routerLink="/contact" routerLinkActive="text-primary">{{ 'header.contact' | translate }}</a>
       </nav>
       <div class="flex items-center gap-4">
+        <app-language-switcher></app-language-switcher>
         <a routerLink="/contact" class="hidden sm:flex items-center justify-center h-10 px-5 bg-primary hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-sm cursor-pointer">
-          Free Consultation
+          {{ 'common.contactUs' | translate }}
         </a>
         <button (click)="toggleMobileMenu()" class="md:hidden p-2 text-gray-600 dark:text-gray-300">
           <span class="material-symbols-outlined">{{ mobileMenuOpen ? 'close' : 'menu' }}</span>
@@ -27,13 +28,13 @@
   @if (mobileMenuOpen) {
     <div class="md:hidden border-t border-gray-200 dark:border-gray-800 bg-background-light dark:bg-background-dark">
       <nav class="flex flex-col px-4 py-4 space-y-3">
-        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}">Home</a>
-        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/practice-areas" routerLinkActive="text-primary">Practice Areas</a>
-        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/lawyers" routerLinkActive="text-primary">Lawyers & Team</a>
-        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/about" routerLinkActive="text-primary">About Us</a>
-        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/contact" routerLinkActive="text-primary">Contact Us</a>
+        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}">{{ 'header.home' | translate }}</a>
+        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/practice-areas" routerLinkActive="text-primary">{{ 'header.practiceAreas' | translate }}</a>
+        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/lawyers" routerLinkActive="text-primary">{{ 'header.attorneys' | translate }}</a>
+        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/about" routerLinkActive="text-primary">{{ 'header.about' | translate }}</a>
+        <a (click)="closeMobileMenu()" class="text-base font-medium hover:text-primary transition-colors py-2" routerLink="/contact" routerLinkActive="text-primary">{{ 'header.contact' | translate }}</a>
         <a (click)="closeMobileMenu()" routerLink="/contact" class="mt-2 flex items-center justify-center h-10 px-5 bg-primary hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-sm">
-          Free Consultation
+          {{ 'common.contactUs' | translate }}
         </a>
       </nav>
     </div>

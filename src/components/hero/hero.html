@@ -5,21 +5,26 @@
         <div class="space-y-4">
           <div class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold w-fit">
             <span class="material-symbols-outlined text-sm mr-1">verified</span> 
-            Your Trusted Legal Partner
+            {{ 'home.hero.badge' | translate }}
           </div>
           <h1 class="text-4xl lg:text-6xl font-black leading-tight tracking-tight text-[#0d121b] dark:text-white">
-            Defending Your Rights with <span class="text-primary">Integrity</span> and <span class="text-primary">Precision</span>.
+            @if (currentLanguage === 'en') {
+              {{ 'home.hero.title' | translate }} <span class="text-primary">{{ 'home.hero.titleHighlight1' | translate }}</span> and <span class="text-primary">{{ 'home.hero.titleHighlight2' | translate }}</span>.
+            }
+            @if (currentLanguage === 'ko') {
+              <span class="text-primary">{{ 'home.hero.titleHighlight1' | translate }}</span>과 <span class="text-primary">{{ 'home.hero.titleHighlight2' | translate }}</span> {{ 'home.hero.title' | translate }}
+            }
           </h1>
           <p class="text-lg text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed">
-            Expert legal representation for complex litigation and corporate matters. We are dedicated to providing clear counsel and aggressive advocacy when it matters most.
+            {{ 'home.hero.subtitle' | translate }}
           </p>
         </div>
         <div class="flex flex-wrap gap-4">
           <button class="flex items-center justify-center h-12 px-8 bg-primary hover:bg-blue-700 text-white text-base font-bold rounded-lg shadow-lg shadow-primary/20 transition-all" routerLink="/contact">
-            Schedule a Consultation
+            {{ 'home.hero.scheduleConsultation' | translate }}
           </button>
           <button class="flex items-center justify-center h-12 px-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-primary text-[#0d121b] dark:text-white text-base font-bold rounded-lg transition-all" routerLink="/practice-areas">
-            View Practice Areas
+            {{ 'home.hero.viewPracticeAreas' | translate }}
           </button>
         </div>
         <div class="pt-4 flex items-center gap-6 text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -29,11 +34,11 @@
           </div> -->
           <div class="flex items-center gap-2">
             <span class="material-symbols-outlined text-green-600">check_circle</span>
-            <span>Prompt Client Response</span>
+            <span>{{ 'home.hero.promptClientResponse' | translate }}</span>
           </div>
           <div class="flex items-center gap-2">
             <span class="material-symbols-outlined text-green-600">check_circle</span>
-            <span>Experienced Ontario Lawyers</span>
+            <span>{{ 'home.hero.experiencedOntarioLawyers' | translate }}</span>
           </div>
         </div>
       </div>
@@ -42,8 +47,8 @@
           <div class="w-full h-full bg-cover bg-center" style="background-image: url('images/office.png');"></div>
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
           <div class="absolute bottom-6 left-6 right-6 text-white">
-            <p class="font-bold text-lg">Excellence in every case.</p>
-            <p class="text-sm text-gray-200">Over 20 years of combined experience.</p>
+            <p class="font-bold text-lg">{{ 'home.hero.excellenceInEveryCase' | translate }}</p>
+            <p class="text-sm text-gray-200">{{ 'home.hero.yearsOfExperience' | translate }}</p>
           </div>
         </div>
         <div class="absolute -top-6 -right-6 w-full h-full border-2 border-primary/20 rounded-2xl -z-0 hidden lg:block"></div>

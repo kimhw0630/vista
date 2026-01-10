@@ -1,8 +1,8 @@
 <section class="py-16 lg:py-24 bg-white dark:bg-gray-900">
   <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-3xl lg:text-4xl font-bold text-[#0d121b] dark:text-white mb-4">Meet Our Partners</h2>
-      <p class="text-gray-600 dark:text-gray-300">Driven by a passion for justice and a commitment to excellence. Our team brings decades of combined experience to every case.</p>
+      <h2 class="text-3xl lg:text-4xl font-bold text-[#0d121b] dark:text-white mb-4">{{ 'home.attorneys.title' | translate }}</h2>
+      <p class="text-gray-600 dark:text-gray-300">{{ 'home.attorneys.subtitle' | translate }}</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       @for (attorney of attorneys; track attorney.id) {

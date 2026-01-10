@@ -1,0 +1,178 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "readMore": "Read More"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "attorneys": "Lawyers & Team",
+    "practiceAreas": "Practice Areas",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "languages": {
+    "english": "English",
+    "korean": "한국어",
+    "and": " and "
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "practiceAreas": "Practice Areas",
+    "contactInfo": "Contact Information",
+    "followUs": "Follow Us",
+    "allRightsReserved": "All rights reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "disclaimer": "Disclaimer"
+  },
+  "home": {
+    "hero": {
+      "badge": "Your Trusted Legal Partner",
+      "title": "Defending Your Rights with",
+      "titleHighlight1": "Integrity",
+      "titleHighlight2": "Precision",
+      "subtitle": "Expert legal representation for complex litigation and corporate matters. We are dedicated to providing clear counsel and aggressive advocacy when it matters most.",
+      "scheduleConsultation": "Schedule a Consultation",
+      "viewPracticeAreas": "View Practice Areas",
+      "promptClientResponse": "Prompt Client Response",
+      "experiencedOntarioLawyers": "Experienced Ontario Lawyers",
+      "excellenceInEveryCase": "Excellence in every case.",
+      "yearsOfExperience": "Over 20 years of combined experience."
+    },
+    "trustIndicators": {
+      "trustedByLeaders": "Trusted by industry leaders"
+    },
+    "expertise": {
+      "title": "Our Expertise",
+      "subtitle": "We specialize in a wide range of legal areas, offering tailored solutions to meet your specific needs.",
+      "viewAll": "View All Practice Areas",
+      "corporateBusiness": {
+        "title": "Corporate & Business",
+        "description": "Incorporation, purchase and sale of a business, shareholders agreement, corporate restructuring, corporate governance, business consulting."
+      },
+      "civilLitigation": {
+        "title": "Civil & Commercial Litigation",
+        "description": "Civil lawsuits such as breach of contract, negligence, misrepresentation, debt collection, judgment enforcement, garnishment, and power of sale proceedings."
+      },
+      "realEstate": {
+        "title": "Real Estate",
+        "description": "Residential and commercial real estate transactions, institutional and private mortgages, condominium purchase/sale, land development, cottages."
+      },
+      "leasing": {
+        "title": "Leasing",
+        "description": "Commercial, industrial & residential leasing, preparing and negotiating leases, landlord and tenant law."
+      }
+    },
+    "attorneys": {
+      "title": "Meet Our Partners",
+      "subtitle": "Driven by a passion for justice and a commitment to excellence. Our team brings decades of combined experience to every case."
+    },
+    "testimonials": {
+      "title": "What our clients say",
+      "quote": "VISTA LAW provided exceptional legal guidance during our merger. Their attention to detail and strategic foresight were instrumental in our success. I cannot recommend them highly enough.",
+      "whyChooseUs": "Why Choose Us?",
+      "provenTrackRecord": {
+        "title": "Proven Track Record",
+        "description": "Over $30M recovered for our clients in complex settlements."
+      },
+      "clientCentric": {
+        "title": "Client-Centric Approach",
+        "description": "We treat every case with the personal attention and dedication it deserves."
+      },
+      "awardWinning": {
+        "title": "Award-Winning Team",
+        "description": "Consistently recognized by Super Lawyers and Best Lawyers in Canada."
+      }
+    },
+    "cta": {
+      "title": "Ready to discuss your case?",
+      "subtitle": "Contact us today for a free, confidential consultation. Let us help you navigate your legal challenges with confidence.",
+      "bookAppointment": "Book Appointment",
+      "phone": "(905) 886-3339"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Our Firm",
+      "subtitle": "Committed to Excellence in Legal Service"
+    },
+    "philosophy": {
+      "title": "Our Philosophy",
+      "description": "We believe in providing personalized legal solutions tailored to each client's unique needs."
+    },
+    "story": {
+      "title": "Our Story"
+    },
+    "team": {
+      "title": "Meet Our Team"
+    }
+  },
+  "attorneys": {
+    "hero": {
+      "title": "Our Attorneys",
+      "subtitle": "Meet our experienced legal professionals"
+    },
+    "ourLawyers": "Our Lawyers",
+    "viewProfile": "View Profile",
+    "search": {
+      "placeholder": "Search attorneys...",
+      "filterByArea": "Filter by Practice Area",
+      "allAreas": "All Practice Areas"
+    },
+    "profile": {
+      "yearsExperience": "Years of Experience",
+      "practiceAreas": "Practice Areas",
+      "education": "Education",
+      "barAdmissions": "Bar Admissions",
+      "awards": "Awards & Recognition",
+      "publications": "Publications",
+      "contactAttorney": "Contact {{name}}"
+    },
+    "clerks": {
+      "title": "Law Clerks",
+      "description": "Our dedicated team of law clerks"
+    }
+  },
+  "practiceAreas": {
+    "hero": {
+      "title": "Practice Areas",
+      "subtitle": "Comprehensive Legal Services Across Multiple Disciplines"
+    },
+    "viewDetails": "View Details",
+    "relatedAreas": "Related Practice Areas"
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "Get in Touch with Our Legal Team"
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! We'll get back to you soon.",
+      "error": "Failed to send message. Please try again."
+    },
+    "info": {
+      "officeHours": "Office Hours",
+      "mondayFriday": "Monday - Friday",
+      "weekend": "Saturday - Sunday",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email"
+    }
+  },
+  "testimonials": {
+    "title": "Client Testimonials",
+    "subtitle": "What Our Clients Say About Us"
+  }
+}

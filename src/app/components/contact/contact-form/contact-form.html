@@ -6,25 +6,35 @@
     </div>
     <form #contactForm="ngForm" class="flex flex-col gap-5" (ngSubmit)="onSubmit($event, contactForm)">
       <!-- Success/Error Message -->
-      <div *ngIf="submitMessage" [class]="submitSuccess ? 'bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-200 border border-green-200 dark:border-green-800' : 'bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-200 border border-red-200 dark:border-red-800'" class="p-4 rounded-lg">
-        {{ submitMessage }}
-      </div>
+      @if (submitMessage) {
+        <div [class]="submitSuccess ? 'bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-200 border border-green-200 dark:border-green-800' : 'bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-200 border border-red-200 dark:border-red-800'" class="p-4 rounded-lg">
+          {{ submitMessage }}
+        </div>
+      }
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div class="flex flex-col gap-2">
           <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="fullName">Full Name</label>
           <input #fullName="ngModel" class="w-full h-12 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-4 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
             id="fullName" name="fullName" [(ngModel)]="formData.fullName" placeholder="John Doe" type="text" required/>
-          <span *ngIf="fullName.invalid && fullName.touched" class="text-xs text-red-600 dark:text-red-400">Full name is required</span>
+          @if (fullName.invalid && fullName.touched) {
+            <span class="text-xs text-red-600 dark:text-red-400">Full name is required</span>
+          }
         </div>
         <div class="flex flex-col gap-2">
           <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="email">Email Address</label>
           <input #email="ngModel" class="w-full h-12 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-4 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
             id="email" name="email" [(ngModel)]="formData.email" placeholder="john@example.com" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
-          <span *ngIf="email.invalid && email.touched" class="text-xs text-red-600 dark:text-red-400">
-            <span *ngIf="email.errors?.['required']">Email is required</span>
-            <span *ngIf="email.errors?.['pattern'] || email.errors?.['email']">Please enter a valid email address</span>
-          </span>
+          @if (email.invalid && email.touched) {
+            <span class="text-xs text-red-600 dark:text-red-400">
+              @if (email.errors?.['required']) {
+                <span>Email is required</span>
+              }
+              @if (email.errors?.['pattern'] || email.errors?.['email']) {
+                <span>Please enter a valid email address</span>
+              }
+            </span>
+          }
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -32,7 +42,9 @@
           <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="phone">Phone Number</label>
           <input #phone="ngModel" class="w-full h-12 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-4 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
             id="phone" name="phone" [(ngModel)]="formData.phone" placeholder="(905) 886-3339" type="tel" required/>
-          <span *ngIf="phone.invalid && phone.touched" class="text-xs text-red-600 dark:text-red-400">Phone number is required</span>
+          @if (phone.invalid && phone.touched) {
+            <span class="text-xs text-red-600 dark:text-red-400">Phone number is required</span>
+          }
         </div>
         <div class="flex flex-col gap-2">
           <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="subject">Subject</label>
@@ -50,7 +62,9 @@
                 <option value="Immigration Law">Immigration Law</option>
             <option value="Other">Other</option>
           </select>
-          <span *ngIf="subject.invalid && subject.touched" class="text-xs text-red-600 dark:text-red-400">Please select a practice area</span>
+          @if (subject.invalid && subject.touched) {
+            <span class="text-xs text-red-600 dark:text-red-400">Please select a practice area</span>
+          }
         </div>
       </div>
       <div class="flex flex-col gap-2">
@@ -66,14 +80,20 @@
         <div class="text-sm leading-6">
           <label class="font-medium text-slate-700 dark:text-slate-300" for="privacy">I agree to the <a routerLink="/privacy-policy" class="text-primary hover:underline">Privacy Policy</a>.</label>
           <p class="text-slate-500 text-xs mt-1">Your information is 100% confidential and privileged.</p>
-          <span *ngIf="privacy.invalid && privacy.touched" class="text-xs text-red-600 dark:text-red-400 block mt-1">You must agree to the Privacy Policy to continue</span>
+          @if (privacy.invalid && privacy.touched) {
+            <span class="text-xs text-red-600 dark:text-red-400 block mt-1">You must agree to the Privacy Policy to continue</span>
+          }
         </div>
       </div>
       <div class="mt-4">
         <button [disabled]="isSubmitting" class="w-full md:w-auto min-w-[200px] cursor-pointer flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-wide shadow-md hover:bg-blue-600 hover:shadow-lg transition-all transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
           type="submit">
-          <span *ngIf="!isSubmitting">Request Consultation</span>
-          <span *ngIf="isSubmitting">Sending...</span>
+          @if (!isSubmitting) {
+            <span>Request Consultation</span>
+          }
+          @if (isSubmitting) {
+            <span>Sending...</span>
+          }
         </button>
       </div>
     </form>

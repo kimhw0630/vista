@@ -1,0 +1,177 @@
+{
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류가 발생했습니다",
+    "contactUs": "문의하기",
+    "learnMore": "자세히 보기",
+    "getStarted": "시작하기",
+    "readMore": "더 읽기"
+  },
+  "languages": {
+    "english": "English",
+    "korean": "한국어",
+    "and": "과 "
+  },
+  "header": {
+    "home": "홈",
+    "about": "회사 소개",
+    "attorneys": "변호사 및 팀",
+    "practiceAreas": "업무 분야",
+    "contact": "연락처",
+    "language": "언어"
+  },
+  "footer": {
+    "quickLinks": "빠른 링크",
+    "practiceAreas": "업무 분야",
+    "contactInfo": "연락처 정보",
+    "followUs": "팔로우",
+    "allRightsReserved": "모든 권리 보유",
+    "privacyPolicy": "개인정보 보호정책",
+    "termsOfService": "서비스 약관",
+    "disclaimer": "면책 조항"
+  },
+  "home": {
+    "hero": {
+      "badge": "신뢰할 수 있는 법률 파트너",
+      "title": "으로 고객의 권리를 지켜드립니다",
+      "titleHighlight1": "정직",
+      "titleHighlight2": "정확함",
+      "subtitle": "복잡한 소송과 기업 법률 문제에 정통한 전문가들이, 결정적인 순간에 명확한 방향과 적극적인 법률 대응을 제공합니다",
+      "scheduleConsultation": "상담 예약",
+      "viewPracticeAreas": "업무 분야 보기",
+      "promptClientResponse": "신속한 고객 대응",
+      "experiencedOntarioLawyers": "온타리오 법률에 정통한 경험 많은 변호사들",
+      "excellenceInEveryCase": "모든 사건에 대한 우수성.",
+      "yearsOfExperience": "20년 이상의 경험."
+    },
+    "trustIndicators": {
+      "trustedByLeaders": "업계에서 신뢰받는 로펌"
+    },
+    "expertise": {
+      "title": "핵심 전문 분야",
+      "subtitle": "다양한 법률 분야에 대한 전문성을 바탕으로, 고객의 개별적인 필요에 맞춘 맞춤형 해결책을 제공합니다",
+      "viewAll": "모든 업무 분야 보기",
+      "corporateBusiness": {
+        "title": "기업 및 비즈니스",
+        "description": "법인 설립에서 기업 매매, 주주 간 계약, 기업 구조조정과 지배구조, 비즈니스 컨설팅까지 맞춤형 솔루션을 제공합니다."
+      },
+      "civilLitigation": {
+        "title": "민사·상사 소송",
+        "description": "계약 문제, 채무 회수, 판결 집행 등 다양한 민사·상사 소송에서 고객에게 최적의 법률 솔루션을 제공합니다."
+      },
+      "realEstate": {
+        "title": "부동산",
+        "description": "주거·상업용 부동산, 모기지, 콘도 매매, 토지 개발 및 별장 거래까지 고객 맞춤형 법률 솔루션을 제공합니다."
+      },
+      "leasing": {
+        "title": "임대차",
+        "description": "상업용, 산업용, 주거용 임대차와 계약 협상, 임대인·임차인 법률 문제까지 맞춤형 솔루션을 제공합니다."
+      }
+    },
+    "attorneys": {
+      "title": "파트너 소개",
+      "subtitle": "정의 실현에 대한 열정과 뛰어난 전문성을 바탕으로, 우리 팀은 각 사건에 풍부한 경험과 노하우를 제공합니다."
+    },
+    "testimonials": {
+      "title": "고객 평가",
+      "quote": "VISTA LAW은 합병 과정에서 뛰어난 법률 자문을 제공해 주었습니다. 세심한 대응과 전략적 통찰 덕분에 성공적인 결과를 얻을 수 있었습니다. 강력히 추천합니다.",
+      "provenTrackRecord": {
+        "title": "검증된 성과",
+        "description": "복잡한 합의 과정에서 고객을 위해 3,000만 달러 이상의 금액을 회수했습니다."
+      },
+      "clientCentric": {
+        "title": "고객 중심 접근",
+        "description": "모든 사건에 대해 고객 맞춤형 세심한 법률 서비스를 제공합니다"
+      },
+      "awardWinning": {
+        "title": "수상 경력 팀",
+        "description": "캐나다 ‘슈퍼 로이어’와 ‘베스트 로이어’에서 지속적으로 인정받는 팀입니다."
+      }
+    },
+    "cta": {
+      "title": "사건 상담을 준비하고 계신가요?",
+      "subtitle": "오늘 바로 연락하여 무료·비밀 상담을 받아보세요. 고객이 법적 문제를 자신 있게 해결할 수 있도록 도와드립니다",
+      "bookAppointment": "예약하기",
+      "phone": "(905) 886-3339"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "회사 소개",
+      "subtitle": "법률 서비스의 우수성에 전념"
+    },
+    "philosophy": {
+      "title": "우리의 철학",
+      "description": "우리는 각 고객의 고유한 요구에 맞춘 맞춤형 법률 솔루션을 제공합니다."
+    },
+    "story": {
+      "title": "우리의 이야기"
+    },
+    "team": {
+      "title": "우리 팀을 만나보세요"
+    }
+  },
+  "attorneys": {
+    "hero": {
+      "title": "변호사",
+      "subtitle": "경험 많은 법률 전문가를 만나보세요"
+    },
+    "ourLawyers": "우리 변호사",
+    "viewProfile": "프로필 보기",
+    "search": {
+      "placeholder": "변호사 검색...",
+      "filterByArea": "업무 분야별 필터",
+      "allAreas": "모든 업무 분야"
+    },
+    "profile": {
+      "yearsExperience": "년 경력",
+      "practiceAreas": "업무 분야",
+      "education": "학력",
+      "barAdmissions": "변호사 자격",
+      "awards": "수상 및 인정",
+      "publications": "출판물",
+      "contactAttorney": "{{name}}에게 연락하기"
+    },
+    "clerks": {
+      "title": "법률 서기",
+      "description": "우리의 헌신적인 법률 서기 팀"
+    }
+  },
+  "practiceAreas": {
+    "hero": {
+      "title": "업무 분야",
+      "subtitle": "여러 분야의 포괄적인 법률 서비스"
+    },
+    "viewDetails": "상세 보기",
+    "relatedAreas": "관련 업무 분야"
+  },
+  "contact": {
+    "hero": {
+      "title": "문의하기",
+      "subtitle": "법률 팀에 연락하세요"
+    },
+    "form": {
+      "name": "성명",
+      "email": "이메일 주소",
+      "phone": "전화번호",
+      "subject": "제목",
+      "message": "메시지",
+      "submit": "메시지 보내기",
+      "sending": "전송 중...",
+      "success": "감사합니다! 곧 연락드리겠습니다.",
+      "error": "메시지 전송에 실패했습니다. 다시 시도해주세요."
+    },
+    "info": {
+      "officeHours": "영업 시간",
+      "mondayFriday": "월요일 - 금요일",
+      "weekend": "토요일 - 일요일",
+      "address": "주소",
+      "phone": "전화",
+      "email": "이메일"
+    }
+  },
+  "testimonials": {
+    "title": "고객 후기",
+    "subtitle": "고객들이 말하는 우리"
+  }
+}
