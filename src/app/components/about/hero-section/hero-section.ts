@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
 })
 export class HeroSectionComponent {
   scrollToMilestones() {
-    const element = document.getElementById('milestones');
+    const element = document.getElementById('ourstory');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }

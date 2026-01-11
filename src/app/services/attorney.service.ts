@@ -270,7 +270,7 @@ export class AttorneyService {
       id: 'warren-chan',
       name: 'Warren Chan',
       title: 'Partner',
-      description: 'Lawyer | Practicing in Association.',
+      description: 'Partner | Practicing in Association.',
       image: 'images/WarrenChan_color.png',
       specialties: ['General Practice'],
       email: '',

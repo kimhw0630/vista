@@ -27,7 +27,7 @@
           <!-- Contact Actions -->
           <div class="grid grid-cols-1 gap-3">
             @if (attorney.email) {
-              <a [href]="'mailto:' + attorney.email" class="flex items-center justify-center gap-2 bg-primary text-white h-10 rounded-lg text-sm font-bold hover:bg-blue-700 transition-colors w-full">
+              <a [href]="'mailto:' + attorney.email" class="flex items-center justify-center gap-2 bg-primary text-white h-10 rounded-lg text-sm font-bold hover:bg-[#5a111a] transition-colors w-full">
                 <span class="material-symbols-outlined text-[18px]">mail</span>
                 Email Me
               </a>
@@ -40,7 +40,7 @@
           <!-- Quick Contact Info -->
           <div class="mt-6 pt-6 border-t border-[#e7ebf3] dark:border-gray-700 space-y-4">
             @if (attorney.phone) {
-              <a class="flex items-start gap-3 group" [href]="'tel:' + attorney.phone">
+              <a class="flex items-start gap-3 group" [href]="'tel:' + attorney.phone.replace(/[^0-9+]/g, '')">
                 <span class="material-symbols-outlined text-primary mt-0.5">call</span>
                 <div>
                   <p class="text-xs text-[#4c669a] dark:text-gray-400 font-medium uppercase tracking-wider">Phone</p>
@@ -257,19 +257,19 @@
           </h3>
           <ul class="space-y-3">
             <li class="flex items-start gap-2 text-sm text-[#4c669a] dark:text-gray-400">
-              <span class="material-symbols-outlined text-[18px] text-green-500">check_circle</span>
+              <span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
               <span>Law Society of Ontario (LSO)</span>
             </li>
             <li class="flex items-start gap-2 text-sm text-[#4c669a] dark:text-gray-400">
-              <span class="material-symbols-outlined text-[18px] text-green-500">check_circle</span>
+              <span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
               <span>Canadian Bar Association (CBA)</span>
             </li>
             <li class="flex items-start gap-2 text-sm text-[#4c669a] dark:text-gray-400">
-              <span class="material-symbols-outlined text-[18px] text-green-500">check_circle</span>
+              <span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
               <span>Ontario Bar Association (OBA)</span>
             </li>
             <li class="flex items-start gap-2 text-sm text-[#4c669a] dark:text-gray-400">
-              <span class="material-symbols-outlined text-[18px] text-green-500">check_circle</span>
+              <span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
               <span>Toronto Lawyers Association (TLA)</span>
             </li>
           </ul>
