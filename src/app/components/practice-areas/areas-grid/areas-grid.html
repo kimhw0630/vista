@@ -3,10 +3,10 @@
     <div class="flex flex-col gap-10 px-4 py-4 @container">
       <div class="flex flex-col gap-4 text-center md:text-left">
         <h1 class="text-[#0d121b] dark:text-white tracking-tight text-[32px] font-bold leading-tight @[480px]:text-4xl">
-          Specialized Practice Areas
+          {{ 'practiceAreas.grid.title' | translate }}
         </h1>
         <p class="text-[#4c669a] dark:text-gray-300 text-base font-normal leading-normal max-w-[720px]">
-          We offer a wide range of legal services to help you navigate complex legal landscapes.
+          {{ 'practiceAreas.grid.subtitle' | translate }}
         </p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-0">
@@ -16,8 +16,8 @@
             <span class="material-symbols-outlined text-3xl">business_center</span>
           </div>
           <div class="flex flex-col gap-2 flex-grow">
-            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">Corporate & Business</h2>
-            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">Incorporation, purchase and sale of a business, shareholders agreement, corporate restructuring, corporate governance, business consulting.</p>
+            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">{{ 'practiceAreas.areas.corporateBusiness.title' | translate }}</h2>
+            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">{{ 'practiceAreas.areas.corporateBusiness.description' | translate }}</p>
           </div>
           <!-- <div class="flex items-center text-primary font-bold text-sm mt-2">
             <span>Learn More</span>
@@ -30,8 +30,8 @@
             <span class="material-symbols-outlined text-3xl">real_estate_agent</span>
           </div>
           <div class="flex flex-col gap-2 flex-grow">
-            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">Real Estate</h2>
-            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">Residential and commercial real estate transactions, institutional and private mortgages, condominium purchase/sale, land development, cottages.</p>
+            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">{{ 'practiceAreas.areas.realEstate.title' | translate }}</h2>
+            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">{{ 'practiceAreas.areas.realEstate.description' | translate }}</p>
           </div>
           <!-- <div class="flex items-center text-primary font-bold text-sm mt-2">
             <span>Learn More</span>
@@ -44,8 +44,8 @@
             <span class="material-symbols-outlined text-3xl">gavel</span>
           </div>
           <div class="flex flex-col gap-2 flex-grow">
-            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">Civil & Commercial Litigation</h2>
-            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">Civil lawsuits such as breach of contract, negligence, misrepresentation, debt collection, judgment enforcement, garnishment, and power of sale proceedings.</p>
+            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">{{ 'practiceAreas.areas.civilLitigation.title' | translate }}</h2>
+            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">{{ 'practiceAreas.areas.civilLitigation.description' | translate }}</p>
           </div>
           <!-- <div class="flex items-center text-primary font-bold text-sm mt-2">
             <span>Learn More</span>
@@ -58,8 +58,8 @@
             <span class="material-symbols-outlined text-3xl">contract_edit</span>
           </div>
           <div class="flex flex-col gap-2 flex-grow">
-            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">Leasing</h2>
-            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">Commercial, industrial & residential leasing, preparing and negotiating leases, landlord and tenant law.</p>
+            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">{{ 'practiceAreas.areas.leasing.title' | translate }}</h2>
+            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">{{ 'practiceAreas.areas.leasing.description' | translate }}</p>
           </div>
           <!-- <div class="flex items-center text-primary font-bold text-sm mt-2">
             <span>Learn More</span>
@@ -72,8 +72,8 @@
             <span class="material-symbols-outlined text-3xl">corporate_fare</span>
           </div>
           <div class="flex flex-col gap-2 flex-grow">
-            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">Employment Law</h2>
-            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">Drafting and negotiating employment contracts, work place safety and harassment, Human Rights Tribunal, wrongful dismissal.</p>
+            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">{{ 'practiceAreas.areas.employmentLaw.title' | translate }}</h2>
+            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">{{ 'practiceAreas.areas.employmentLaw.description' | translate }}</p>
           </div>
           <!-- <div class="flex items-center text-primary font-bold text-sm mt-2">
             <span>Learn More</span>
@@ -86,8 +86,8 @@
             <span class="material-symbols-outlined text-3xl">nature_people</span>
           </div>
           <div class="flex flex-col gap-2 flex-grow">
-            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">Wills & Estates</h2>
-            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">Preparing Wills and Powers of Attorney, estate planning, probates.</p>
+            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">{{ 'practiceAreas.areas.willsEstates.title' | translate }}</h2>
+            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">{{ 'practiceAreas.areas.willsEstates.description' | translate }}</p>
           </div>
         </div>
 
@@ -96,8 +96,8 @@
             <span class="material-symbols-outlined text-3xl">medical_services</span>
           </div>
           <div class="flex flex-col gap-2 flex-grow">
-            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">Dental / Health Law</h2>
-            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">Incorporating dentistry / chiropractic / optometry professional corporations, compliance with RCDSO regulations, buying and selling shares /assets of a health professional corporation, employment-related consulting.</p>
+            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">{{ 'practiceAreas.areas.dentalHealth.title' | translate }}</h2>
+            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">{{ 'practiceAreas.areas.dentalHealth.description' | translate }}</p>
           </div>
         </div>
 
@@ -106,8 +106,8 @@
             <span class="material-symbols-outlined text-3xl">network_node</span>
           </div>
           <div class="flex flex-col gap-2 flex-grow">
-            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">Referral Services</h2>
-            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">We have a network of reliable and competent professionals in various fields, including trademark agents, paralegals, banks, mortgage agents, realtors, home inspectors and business valuators, to whom we can refer clients when requested.</p>
+            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">{{ 'practiceAreas.areas.referralServices.title' | translate }}</h2>
+            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">{{ 'practiceAreas.areas.referralServices.description' | translate }}</p>
           </div>
         </div>
 
@@ -116,8 +116,8 @@
             <span class="material-symbols-outlined text-3xl">passport</span>
           </div>
           <div class="flex flex-col gap-2 flex-grow">
-            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">Immigration Law</h2>
-            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">Legal advice and guidance for complexities of immigration laws, including visa applications, permanent residency, citizenship, deportation issues, and temporary residency applications.</p>
+            <h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">{{ 'practiceAreas.areas.immigration.title' | translate }}</h2>
+            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-relaxed">{{ 'practiceAreas.areas.immigration.description' | translate }}</p>
           </div>
         </div>
 

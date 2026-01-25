@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { AttorneyService, Attorney } from '../../app/services/attorney.service';
 import { SeoService } from '../../app/services/seo.service';
+import { TranslatePipe } from '../../app/pipes/translate.pipe';
 
 @Component({
   selector: 'app-attorney-profile',
-  imports: [RouterLink],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './attorney-profile.html',
   styleUrl: './attorney-profile.scss'
 })

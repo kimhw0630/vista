@@ -1,8 +1,8 @@
 <div class="flex flex-col">
   <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 p-6 md:p-10 sticky top-24">
     <div class="mb-8">
-      <h2 class="text-2xl md:text-3xl font-bold mb-2">Contact Us</h2>
-      <p class="text-slate-500 dark:text-slate-400">Fill out the form below and a member of our team will be in touch shortly.</p>
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">{{ 'contact.form.title' | translate }}</h2>
+      <p class="text-slate-500 dark:text-slate-400">{{ 'contact.form.subtitle' | translate }}</p>
     </div>
     <form #contactForm="ngForm" class="flex flex-col gap-5" (ngSubmit)="onSubmit($event, contactForm)">
       <!-- Success/Error Message -->
@@ -14,24 +14,24 @@
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div class="flex flex-col gap-2">
-          <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="fullName">Full Name</label>
+          <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="fullName">{{ 'contact.form.name' | translate }}</label>
           <input #fullName="ngModel" class="w-full h-12 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-4 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
-            id="fullName" name="fullName" [(ngModel)]="formData.fullName" placeholder="John Doe" type="text" maxlength="100" required/>
+            id="fullName" name="fullName" [(ngModel)]="formData.fullName" [placeholder]="'contact.form.namePlaceholder' | translate" type="text" maxlength="100" required/>
           @if (fullName.invalid && fullName.touched) {
-            <span class="text-xs text-red-600 dark:text-red-400">Full name is required</span>
+            <span class="text-xs text-red-600 dark:text-red-400">{{ 'contact.form.validation.nameRequired' | translate }}</span>
           }
         </div>
         <div class="flex flex-col gap-2">
-          <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="email">Email Address</label>
+          <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="email">{{ 'contact.form.email' | translate }}</label>
           <input #email="ngModel" class="w-full h-12 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-4 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
-            id="email" name="email" [(ngModel)]="formData.email" placeholder="john@example.com" type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" maxlength="255" required/>
+            id="email" name="email" [(ngModel)]="formData.email" [placeholder]="'contact.form.emailPlaceholder' | translate" type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" maxlength="255" required/>
           @if (email.invalid && email.touched) {
             <span class="text-xs text-red-600 dark:text-red-400">
               @if (email.errors?.['required']) {
-                <span>Email is required</span>
+                <span>{{ 'contact.form.validation.emailRequired' | translate }}</span>
               }
               @if (email.errors?.['pattern'] || email.errors?.['email']) {
-                <span>Please enter a valid email address</span>
+                <span>{{ 'contact.form.validation.emailInvalid' | translate }}</span>
               }
             </span>
           }
@@ -39,38 +39,38 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div class="flex flex-col gap-2">
-          <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="phone">Phone Number</label>
+          <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="phone">{{ 'contact.form.phone' | translate }}</label>
           <input #phone="ngModel" class="w-full h-12 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-4 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
-            id="phone" name="phone" [(ngModel)]="formData.phone" placeholder="(905) 886-3339" type="tel" maxlength="50" required/>
+            id="phone" name="phone" [(ngModel)]="formData.phone" [placeholder]="'contact.form.phonePlaceholder' | translate" type="tel" maxlength="50" required/>
           @if (phone.invalid && phone.touched) {
-            <span class="text-xs text-red-600 dark:text-red-400">Phone number is required</span>
+            <span class="text-xs text-red-600 dark:text-red-400">{{ 'contact.form.validation.phoneRequired' | translate }}</span>
           }
         </div>
         <div class="flex flex-col gap-2">
-          <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="subject">Subject</label>
+          <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="subject">{{ 'contact.form.subject' | translate }}</label>
           <select #subject="ngModel" class="w-full h-12 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-4 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
             id="subject" name="subject" [(ngModel)]="formData.subject" required>
-            <option disabled selected value="">Select practice area</option>
-            <option value="Corporate & Business">Corporate & Business</option>
-            <option value="Real Estate">Real Estate</option>
-            <option value="Civil & Commercial Litigation">Civil & Commercial Litigation</option>
-            <option value="Employment Law">Employment Law</option>
-             <option value="Wills & Estates">Wills & Estates</option>
-              <option value="Dental / Health Law">Dental / Health Law</option>
-               <option value="Referral Services">Referral Services</option>
-                <option value="Leasing">Leasing</option>
-                <option value="Immigration Law">Immigration Law</option>
-            <option value="Other">Other</option>
+            <option disabled selected value="">{{ 'contact.form.subjectPlaceholder' | translate }}</option>
+            <option value="Corporate & Business">{{ 'contact.form.subjects.corporate' | translate }}</option>
+            <option value="Real Estate">{{ 'contact.form.subjects.realEstate' | translate }}</option>
+            <option value="Civil & Commercial Litigation">{{ 'contact.form.subjects.litigation' | translate }}</option>
+            <option value="Employment Law">{{ 'contact.form.subjects.employment' | translate }}</option>
+             <option value="Wills & Estates">{{ 'contact.form.subjects.wills' | translate }}</option>
+              <option value="Dental / Health Law">{{ 'contact.form.subjects.dental' | translate }}</option>
+               <option value="Referral Services">{{ 'contact.form.subjects.referral' | translate }}</option>
+                <option value="Leasing">{{ 'contact.form.subjects.leasing' | translate }}</option>
+                <option value="Immigration Law">{{ 'contact.form.subjects.immigration' | translate }}</option>
+            <option value="Other">{{ 'contact.form.subjects.other' | translate }}</option>
           </select>
           @if (subject.invalid && subject.touched) {
-            <span class="text-xs text-red-600 dark:text-red-400">Please select a practice area</span>
+            <span class="text-xs text-red-600 dark:text-red-400">{{ 'contact.form.validation.subjectRequired' | translate }}</span>
           }
         </div>
       </div>
       <div class="flex flex-col gap-2">
-        <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="message">Tell us about your case</label>
+        <label class="text-sm font-semibold text-slate-700 dark:text-slate-200" for="message">{{ 'contact.form.message' | translate }}</label>
         <textarea class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all resize-none"
-          id="message" name="message" [(ngModel)]="formData.message" placeholder="Hello there, I would like to talk about..." rows="5" maxlength="2000"></textarea>
+          id="message" name="message" [(ngModel)]="formData.message" [placeholder]="'contact.form.messagePlaceholder' | translate" rows="5" maxlength="2000"></textarea>
       </div>
       <div class="flex items-start gap-3 mt-2">
         <div class="flex h-6 items-center">
@@ -78,10 +78,10 @@
             id="privacy" name="privacy" [(ngModel)]="privacyAccepted" type="checkbox" required/>
         </div>
         <div class="text-sm leading-6">
-          <label class="font-medium text-slate-700 dark:text-slate-300" for="privacy">I agree to the <a routerLink="/privacy-policy" class="text-primary hover:underline">Privacy Policy</a>.</label>
-          <p class="text-slate-500 text-xs mt-1">Your information is 100% confidential and privileged.</p>
+          <label class="font-medium text-slate-700 dark:text-slate-300" for="privacy">{{ 'contact.form.privacyLabel' | translate }} <a routerLink="/privacy-policy" class="text-primary hover:underline">{{ 'contact.form.privacyLink' | translate }}</a>.</label>
+          <p class="text-slate-500 text-xs mt-1">{{ 'contact.form.privacyNote' | translate }}</p>
           @if (privacy.invalid && privacy.touched) {
-            <span class="text-xs text-red-600 dark:text-red-400 block mt-1">You must agree to the Privacy Policy to continue</span>
+            <span class="text-xs text-red-600 dark:text-red-400 block mt-1">{{ 'contact.form.validation.privacyRequired' | translate }}</span>
           }
         </div>
       </div>
@@ -89,10 +89,10 @@
         <button [disabled]="isSubmitting" class="w-full md:w-auto min-w-[200px] cursor-pointer flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-wide shadow-md hover:bg-[#5a111a] hover:shadow-lg transition-all transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
           type="submit">
           @if (!isSubmitting) {
-            <span>Send Message</span>
+            <span>{{ 'contact.form.submit' | translate }}</span>
           }
           @if (isSubmitting) {
-            <span>Sending...</span>
+            <span>{{ 'contact.form.sending' | translate }}</span>
           }
         </button>
       </div>

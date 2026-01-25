@@ -2,11 +2,11 @@
 <div class="bg-background-light dark:bg-background-dark py-4">
   <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
     <nav class="flex items-center text-sm text-[#4c669a] dark:text-gray-400">
-      <a class="hover:text-primary transition-colors" routerLink="/">Home</a>
+      <a class="hover:text-primary transition-colors" routerLink="/">{{ 'attorneyProfile.breadcrumbs.home' | translate }}</a>
       <span class="material-symbols-outlined text-[16px] mx-2">chevron_right</span>
-      <a class="hover:text-primary transition-colors cursor-pointer" (click)="goBack()">Lawyers</a>
+      <a class="hover:text-primary transition-colors cursor-pointer" (click)="goBack()">{{ 'attorneyProfile.breadcrumbs.lawyers' | translate }}</a>
       <span class="material-symbols-outlined text-[16px] mx-2">chevron_right</span>
-      <span class="text-[#0d121b] dark:text-white font-medium">{{ attorney?.name || 'Lawyer' }}</span>
+      <span class="text-[#0d121b] dark:text-white font-medium">{{ attorney?.name || ('attorneyProfile.breadcrumbs.lawyer' | translate) }}</span>
     </nav>
   </div>
 </div>
@@ -29,12 +29,12 @@
             @if (attorney.email) {
               <a [href]="'mailto:' + attorney.email" class="flex items-center justify-center gap-2 bg-primary text-white h-10 rounded-lg text-sm font-bold hover:bg-[#5a111a] transition-colors w-full">
                 <span class="material-symbols-outlined text-[18px]">mail</span>
-                Email Me
+                {{ 'attorneyProfile.actions.emailMe' | translate }}
               </a>
             }
             <button class="flex items-center justify-center gap-2 bg-[#e7ebf3] dark:bg-gray-800 text-[#0d121b] dark:text-white h-10 rounded-lg text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors w-full">
               <span class="material-symbols-outlined text-[18px]">contact_page</span>
-              Download vCard
+              {{ 'attorneyProfile.actions.downloadVCard' | translate }}
             </button>
           </div>
           <!-- Quick Contact Info -->
@@ -43,7 +43,7 @@
               <a class="flex items-start gap-3 group" [href]="'tel:' + attorney.phone.replace(/[^0-9+]/g, '')">
                 <span class="material-symbols-outlined text-primary mt-0.5">call</span>
                 <div>
-                  <p class="text-xs text-[#4c669a] dark:text-gray-400 font-medium uppercase tracking-wider">Phone</p>
+                  <p class="text-xs text-[#4c669a] dark:text-gray-400 font-medium uppercase tracking-wider">{{ 'attorneyProfile.contact.phone' | translate }}</p>
                   <p class="text-sm font-medium group-hover:text-primary transition-colors">{{ attorney.phone }}</p>
                 </div>
               </a>
@@ -51,16 +51,16 @@
             <div class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
               <div>
-                <p class="text-xs text-[#4c669a] dark:text-gray-400 font-medium uppercase tracking-wider">Office</p>
-                <p class="text-sm font-medium">Markham, ON</p>
+                <p class="text-xs text-[#4c669a] dark:text-gray-400 font-medium uppercase tracking-wider">{{ 'attorneyProfile.contact.office' | translate }}</p>
+                <p class="text-sm font-medium">{{ 'attorneyProfile.contact.officeLocation' | translate }}</p>
               </div>
             </div>
             @if (attorney.linkedin) {
               <a class="flex items-start gap-3 group" [href]="attorney.linkedin" target="_blank">
                 <span class="material-symbols-outlined text-primary mt-0.5">link</span>
                 <div>
-                  <p class="text-xs text-[#4c669a] dark:text-gray-400 font-medium uppercase tracking-wider">LinkedIn</p>
-                  <p class="text-sm font-medium group-hover:text-primary transition-colors">View Profile</p>
+                  <p class="text-xs text-[#4c669a] dark:text-gray-400 font-medium uppercase tracking-wider">{{ 'attorneyProfile.contact.linkedin' | translate }}</p>
+                  <p class="text-sm font-medium group-hover:text-primary transition-colors">{{ 'attorneyProfile.contact.viewProfile' | translate }}</p>
                 </div>
               </a>
             }
@@ -72,7 +72,7 @@
           <div class="space-y-6">
             @if (attorney.education && attorney.education.length > 0) {
               <div>
-                <h3 class="text-sm font-bold uppercase tracking-wider text-[#4c669a] dark:text-gray-400 mb-3">Education</h3>
+                <h3 class="text-sm font-bold uppercase tracking-wider text-[#4c669a] dark:text-gray-400 mb-3">{{ 'attorneyProfile.sections.education' | translate }}</h3>
                 <ul class="space-y-3">
                   @for (edu of attorney.education; track edu.school) {
                     <li class="flex gap-3">
@@ -88,7 +88,7 @@
             }
             @if (attorney.barAdmissions && attorney.barAdmissions.length > 0) {
               <div class="pt-6 border-t border-[#e7ebf3] dark:border-gray-700">
-                <h3 class="text-sm font-bold uppercase tracking-wider text-[#4c669a] dark:text-gray-400 mb-3">Bar Admissions</h3>
+                <h3 class="text-sm font-bold uppercase tracking-wider text-[#4c669a] dark:text-gray-400 mb-3">{{ 'attorneyProfile.sections.barAdmissions' | translate }}</h3>
                 <ul class="space-y-2">
                   @for (bar of attorney.barAdmissions; track bar) {
                     <li class="text-sm font-medium">{{ bar }}</li>
@@ -98,7 +98,7 @@
             }
             @if (attorney.practices && attorney.practices.length > 0) {
               <div [class.pt-6]="attorney.barAdmissions && attorney.barAdmissions.length > 0" [class.border-t]="attorney.barAdmissions && attorney.barAdmissions.length > 0" class="border-[#e7ebf3] dark:border-gray-700">
-                <h3 class="text-sm font-bold uppercase tracking-wider text-[#4c669a] dark:text-gray-400 mb-3">Practice Areas</h3>
+                <h3 class="text-sm font-bold uppercase tracking-wider text-[#4c669a] dark:text-gray-400 mb-3">{{ 'attorneyProfile.sections.practiceAreas' | translate }}</h3>
                 <div class="flex flex-wrap gap-2">
                   @for (practice of attorney.practices; track practice.shortName) {
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-primary/10 text-primary dark:bg-primary/20 dark:text-blue-300">
@@ -126,13 +126,13 @@
       <div class="mb-8 border-b border-[#e7ebf3] dark:border-gray-700">
         <div class="flex overflow-x-auto no-scrollbar gap-8">
           <a (click)="setActiveTab('biography')" [class.border-primary]="activeTab === 'biography'" [class.text-primary]="activeTab === 'biography'" [class.border-transparent]="activeTab !== 'biography'" [class.text-[#4c669a]]="activeTab !== 'biography'" class="whitespace-nowrap pb-3 border-b-2 dark:text-gray-400 hover:text-[#0d121b] dark:hover:text-white font-bold text-sm tracking-wide transition-colors cursor-pointer">
-            Profile
+            {{ 'attorneyProfile.tabs.profile' | translate }}
           </a>
           <a (click)="setActiveTab('experience')" [class.border-primary]="activeTab === 'experience'" [class.text-primary]="activeTab === 'experience'" [class.border-transparent]="activeTab !== 'experience'" [class.text-[#4c669a]]="activeTab !== 'experience'" class="whitespace-nowrap pb-3 border-b-2 dark:text-gray-400 hover:text-[#0d121b] dark:hover:text-white font-bold text-sm tracking-wide transition-colors cursor-pointer">
-            Professional Experience
+            {{ 'attorneyProfile.tabs.experience' | translate }}
           </a>
           <a (click)="setActiveTab('publications')" [class.border-primary]="activeTab === 'publications'" [class.text-primary]="activeTab === 'publications'" [class.border-transparent]="activeTab !== 'publications'" [class.text-[#4c669a]]="activeTab !== 'publications'" class="whitespace-nowrap pb-3 border-b-2 dark:text-gray-400 hover:text-[#0d121b] dark:hover:text-white font-bold text-sm tracking-wide transition-colors cursor-pointer">
-            Notable Cases
+            {{ 'attorneyProfile.tabs.notableCases' | translate }}
           </a>
           <!-- <a (click)="setActiveTab('news')" [class.border-primary]="activeTab === 'news'" [class.text-primary]="activeTab === 'news'" [class.border-transparent]="activeTab !== 'news'" [class.text-[#4c669a]]="activeTab !== 'news'" class="whitespace-nowrap pb-3 border-b-2 dark:text-gray-400 hover:text-[#0d121b] dark:hover:text-white font-bold text-sm tracking-wide transition-colors cursor-pointer">
             News & Insights
@@ -152,7 +152,7 @@
               }
             } @else {
               <p class="text-lg leading-relaxed mb-6">
-                Biography information coming soon.
+                {{ 'attorneyProfile.content.biographyComingSoon' | translate }}
               </p>
             }
             
@@ -179,7 +179,7 @@
             <span class="bg-primary/10 text-primary p-2 rounded-lg">
               <span class="material-symbols-outlined">gavel</span>
             </span>
-            Professional Roles & Experience
+            {{ 'attorneyProfile.content.experienceTitle' | translate }}
           </h2>
           @if (attorney.experience && attorney.experience.length > 0) {
             <div class="space-y-4">
@@ -197,7 +197,7 @@
           } @else {
             <div class="text-[#4c669a] dark:text-gray-400 text-center py-12">
               <span class="material-symbols-outlined text-6xl mb-4 opacity-20">work_history</span>
-              <p>Experience information coming soon.</p>
+              <p>{{ 'attorneyProfile.content.experienceComingSoon' | translate }}</p>
             </div>
           }
         </section>
@@ -210,7 +210,7 @@
           <span class="bg-primary/10 text-primary p-2 rounded-lg">
             <span class="material-symbols-outlined">menu_book</span>
           </span>
-          Representative Matters
+          {{ 'attorneyProfile.content.casesTitle' | translate }}
         </h2>
         
         <div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e7ebf3] dark:border-gray-800 overflow-hidden divide-y divide-[#e7ebf3] dark:divide-gray-800">
@@ -225,7 +225,7 @@
           } @else {
             <div class="text-[#4c669a] dark:text-gray-400 text-center py-12">
               <span class="material-symbols-outlined text-6xl mb-4 opacity-20">menu_book</span>
-              <p>No notable cases available at this time.</p>
+              <p>{{ 'attorneyProfile.content.noCases' | translate }}</p>
             </div>
           }
         </div>
@@ -253,34 +253,34 @@
         <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-[#e7ebf3] dark:border-gray-800">
           <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
             <span class="material-symbols-outlined text-primary">groups</span>
-            Affiliations
+            {{ 'attorneyProfile.content.affiliationsTitle' | translate }}
           </h3>
           <ul class="space-y-3">
             <li class="flex items-start gap-2 text-sm text-[#4c669a] dark:text-gray-400">
               <span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
-              <span>Law Society of Ontario (LSO)</span>
+              <span>{{ 'attorneyProfile.affiliations.lso' | translate }}</span>
             </li>
             <li class="flex items-start gap-2 text-sm text-[#4c669a] dark:text-gray-400">
               <span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
-              <span>Canadian Bar Association (CBA)</span>
+              <span>{{ 'attorneyProfile.affiliations.cba' | translate }}</span>
             </li>
             <li class="flex items-start gap-2 text-sm text-[#4c669a] dark:text-gray-400">
               <span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
-              <span>Ontario Bar Association (OBA)</span>
+              <span>{{ 'attorneyProfile.affiliations.oba' | translate }}</span>
             </li>
             <li class="flex items-start gap-2 text-sm text-[#4c669a] dark:text-gray-400">
               <span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
-              <span>Toronto Lawyers Association (TLA)</span>
+              <span>{{ 'attorneyProfile.affiliations.tla' | translate }}</span>
             </li>
           </ul>
         </div>
         <div class="bg-primary text-white p-6 rounded-xl relative overflow-hidden group cursor-pointer">
           <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white/10 rounded-full blur-2xl group-hover:bg-white/20 transition-colors"></div>
-          <h3 class="font-bold text-lg mb-2 relative z-10">Work with {{ attorney.name }}</h3>
-          <p class="text-blue-100 text-sm mb-4 relative z-10">Schedule a preliminary consultation to discuss your case details.</p>
+          <h3 class="font-bold text-lg mb-2 relative z-10">{{ 'attorneyProfile.content.workWith' | translate }} {{ attorney.name }}</h3>
+          <p class="text-blue-100 text-sm mb-4 relative z-10">{{ 'attorneyProfile.content.scheduleConsultation' | translate }}</p>
           <a routerLink="/contact">
             <button class="bg-white text-primary text-sm font-bold py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors relative z-10">
-              Book Consultation
+              {{ 'attorneyProfile.actions.bookConsultation' | translate }}
             </button>
           </a>
         </div>

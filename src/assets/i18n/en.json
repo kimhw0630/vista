@@ -21,14 +21,26 @@
     "and": " and "
   },
   "footer": {
+    "companyName": "VISTA LAW LLP",
+    "description": "Providing top-tier legal representation with a commitment to integrity and results. We are here to fight for you.",
     "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "contactUs": "Contact Us",
     "practiceAreas": "Practice Areas",
+    "ourLawyers": "Our Lawyers",
+    "aboutUs": "About Us",
+    "contact": "Contact",
     "contactInfo": "Contact Information",
     "followUs": "Follow Us",
     "allRightsReserved": "All rights reserved",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
-    "disclaimer": "Disclaimer"
+    "disclaimer": "Disclaimer",
+    "address": "26 Glen Cameron Road, Markham",
+    "addressLine2": "Ontario, L6C 1Y1",
+    "phone": "(905) 886-3339",
+    "email": "info@vistallp.ca",
+    "copyright": "© 2025 Vista Law LLP. All rights reserved."
   },
   "home": {
     "hero": {
@@ -99,14 +111,35 @@
   "about": {
     "hero": {
       "title": "About Our Firm",
-      "subtitle": "Committed to Excellence in Legal Service"
+      "subtitle": "We are committed to serving clients in the most efficient, professional and practical manner.",
+      "storyButton": "Story About Us",
+      "teamButton": "Meet The Team"
+    },
+    "stats": {
+      "yearsExperience": "Years of Experience",
+      "casesWon": "Cases Won",
+      "expertTeams": "Expert Teams",
+      "clientSatisfaction": "Client Satisfaction"
+    },
+    "story": {
+      "label": "Our Story",
+      "title": "The Story Behind our Law Firm",
+      "description": "Our lawyers have successfully represented a diverse group of clients, ranging from international corporations to small business owners. At VISTA LAW, your words, your time, and your money matter. Whether it is a complex acquisition of a multi-million dollar business, a crucial lawsuit or a simple sale of your home, you can rely on our experts for on going advice and advocacy"
     },
     "philosophy": {
       "title": "Our Philosophy",
-      "description": "We believe in providing personalized legal solutions tailored to each client's unique needs."
-    },
-    "story": {
-      "title": "Our Story"
+      "integrity": {
+        "title": "Unwavering Integrity",
+        "description": "We believe the law is a tool for truth. We operate with complete transparency in billing and strategy."
+      },
+      "clientFocus": {
+        "title": "Client-Centric Focus",
+        "description": "You are not a case number. We build strategies tailored to your unique personal and business goals."
+      },
+      "excellence": {
+        "title": "Excellence in Action",
+        "description": "Good enough is not in our vocabulary. We relentlessly pursue the best possible outcome."
+      }
     },
     "team": {
       "title": "Meet Our Team"
@@ -114,15 +147,32 @@
   },
   "attorneys": {
     "hero": {
-      "title": "Our Attorneys",
-      "subtitle": "Meet our experienced legal professionals"
+      "title": "Expert Counsel. Dedicated Partners.",
+      "subtitle": "Our team of experienced lawyers is dedicated to protecting your rights and achieving the best possible outcomes for your case."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "lawyers": "lawyers"
     },
     "ourLawyers": "Our Lawyers",
     "viewProfile": "View Profile",
     "search": {
-      "placeholder": "Search attorneys...",
+      "title": "Meet Our Team",
+      "subtitle": "Browse our directory of 42 legal professionals.",
+      "placeholder": "Search by name...",
       "filterByArea": "Filter by Practice Area",
-      "allAreas": "All Practice Areas"
+      "allAreas": "All Practice Areas",
+      "all": "All",
+      "corporateLaw": "Corporate Law",
+      "litigation": "Litigation",
+      "familyLaw": "Family Law",
+      "intellectualProperty": "Intellectual Property",
+      "realEstate": "Real Estate"
+    },
+    "cta": {
+      "title": "Need help finding the right lawyer?",
+      "subtitle": "Schedule a consultation, and our team will match you with the most appropriate legal professional for your specific case.",
+      "bookConsultation": "Book Consultation"
     },
     "profile": {
       "yearsExperience": "Years of Experience",
@@ -140,35 +190,173 @@
   },
   "practiceAreas": {
     "hero": {
-      "title": "Practice Areas",
-      "subtitle": "Comprehensive Legal Services Across Multiple Disciplines"
+      "title": "Our Expertise",
+      "subtitle": "Dedicated Legal Representation. We navigate complex legal landscapes with precision, offering comprehensive solutions tailored to your unique situation.",
+      "viewAllPractices": "View All Practices",
+      "meetOurTeam": "Meet Our Team"
+    },
+    "grid": {
+      "title": "Specialized Practice Areas",
+      "subtitle": "We offer a wide range of legal services to help you navigate complex legal landscapes."
+    },
+    "areas": {
+      "corporateBusiness": {
+        "title": "Corporate & Business",
+        "description": "Incorporation, purchase and sale of a business, shareholders agreement, corporate restructuring, corporate governance, business consulting."
+      },
+      "realEstate": {
+        "title": "Real Estate",
+        "description": "Residential and commercial real estate transactions, institutional and private mortgages, condominium purchase/sale, land development, cottages."
+      },
+      "civilLitigation": {
+        "title": "Civil & Commercial Litigation",
+        "description": "Civil lawsuits such as breach of contract, negligence, misrepresentation, debt collection, judgment enforcement, garnishment, and power of sale proceedings."
+      },
+      "leasing": {
+        "title": "Leasing",
+        "description": "Commercial, industrial & residential leasing, preparing and negotiating leases, landlord and tenant law."
+      },
+      "employmentLaw": {
+        "title": "Employment Law",
+        "description": "Drafting and negotiating employment contracts, work place safety and harassment, Human Rights Tribunal, wrongful dismissal."
+      },
+      "willsEstates": {
+        "title": "Wills & Estates",
+        "description": "Preparing Wills and Powers of Attorney, estate planning, probates."
+      },
+      "dentalHealth": {
+        "title": "Dental / Health Law",
+        "description": "Incorporating dentistry / chiropractic / optometry professional corporations, compliance with RCDSO regulations, buying and selling shares /assets of a health professional corporation, employment-related consulting."
+      },
+      "referralServices": {
+        "title": "Referral Services",
+        "description": "We have a network of reliable and competent professionals in various fields, including trademark agents, paralegals, banks, mortgage agents, realtors, home inspectors and business valuators, to whom we can refer clients when requested."
+      },
+      "immigration": {
+        "title": "Immigration Law",
+        "description": "Legal advice and guidance for complexities of immigration laws, including visa applications, permanent residency, citizenship, deportation issues, and temporary residency applications."
+      }
+    },
+    "stats": {
+      "title": "Why Choose Vista Law?",
+      "subtitle": "Our track record speaks for itself.",
+      "yearsExperience": "Years Experience",
+      "casesWon": "Cases Won",
+      "clientSatisfaction": "Client Satisfaction"
+    },
+    "testimonial": {
+      "quote": "From the first consultation to the final steps, Vista Law was responsive and thorough. We felt supported and well-informed throughout the process."
+    },
+    "filters": {
+      "allAreas": "All Areas",
+      "personalServices": "Personal Services",
+      "businessLaw": "Business Law",
+      "litigation": "Litigation"
     },
     "viewDetails": "View Details",
     "relatedAreas": "Related Practice Areas"
   },
   "contact": {
     "hero": {
-      "title": "Contact Us",
-      "subtitle": "Get in Touch with Our Legal Team"
-    },
-    "form": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "subject": "Subject",
-      "message": "Message",
-      "submit": "Send Message",
-      "sending": "Sending...",
-      "success": "Thank you! We'll get back to you soon.",
-      "error": "Failed to send message. Please try again."
+      "title": "Get in Touch",
+      "subtitle": "We are here to help with your legal needs. Reach out to our team for a confidential consultation today."
     },
     "info": {
+      "title": "Contact Information",
+      "phone": "Phone",
+      "email": "Email",
+      "office": "Office",
+      "location": "Our Location",
       "officeHours": "Office Hours",
       "mondayFriday": "Monday - Friday",
       "weekend": "Saturday - Sunday",
-      "address": "Address",
+      "address": "Address"
+    },
+    "form": {
+      "title": "Contact Us",
+      "subtitle": "Fill out the form below and a member of our team will be in touch shortly.",
+      "name": "Full Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "(905) 886-3339",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select practice area",
+      "message": "Tell us about your case",
+      "messagePlaceholder": "Hello there, I would like to talk about...",
+      "privacyLabel": "I agree to the",
+      "privacyLink": "Privacy Policy",
+      "privacyNote": "Your information is 100% confidential and privileged.",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! We'll get back to you soon.",
+      "error": "Failed to send message. Please try again.",
+      "validation": {
+        "nameRequired": "Full name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "phoneRequired": "Phone number is required",
+        "subjectRequired": "Please select a practice area",
+        "privacyRequired": "You must agree to the Privacy Policy to continue"
+      },
+      "subjects": {
+        "corporate": "Corporate & Business",
+        "realEstate": "Real Estate",
+        "litigation": "Civil & Commercial Litigation",
+        "employment": "Employment Law",
+        "wills": "Wills & Estates",
+        "dental": "Dental / Health Law",
+        "referral": "Referral Services",
+        "leasing": "Leasing",
+        "immigration": "Immigration Law",
+        "other": "Other"
+      }
+    }
+  },
+  "attorneyProfile": {
+    "breadcrumbs": {
+      "home": "Home",
+      "lawyers": "Lawyers",
+      "lawyer": "Lawyer"
+    },
+    "actions": {
+      "emailMe": "Email Me",
+      "downloadVCard": "Download vCard",
+      "bookConsultation": "Book Consultation"
+    },
+    "contact": {
       "phone": "Phone",
-      "email": "Email"
+      "office": "Office",
+      "officeLocation": "Markham, ON",
+      "linkedin": "LinkedIn",
+      "viewProfile": "View Profile"
+    },
+    "sections": {
+      "education": "Education",
+      "barAdmissions": "Bar Admissions",
+      "practiceAreas": "Practice Areas"
+    },
+    "tabs": {
+      "profile": "Profile",
+      "experience": "Professional Experience",
+      "notableCases": "Notable Cases"
+    },
+    "content": {
+      "biographyComingSoon": "Biography information coming soon.",
+      "experienceTitle": "Professional Roles & Experience",
+      "experienceComingSoon": "Experience information coming soon.",
+      "casesTitle": "Representative Matters",
+      "noCases": "No notable cases available at this time.",
+      "affiliationsTitle": "Affiliations",
+      "workWith": "Work with",
+      "scheduleConsultation": "Schedule a preliminary consultation to discuss your case details."
+    },
+    "affiliations": {
+      "lso": "Law Society of Ontario (LSO)",
+      "cba": "Canadian Bar Association (CBA)",
+      "oba": "Ontario Bar Association (OBA)",
+      "tla": "Toronto Lawyers Association (TLA)"
     }
   },
   "testimonials": {

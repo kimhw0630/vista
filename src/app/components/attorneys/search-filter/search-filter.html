@@ -1,37 +1,37 @@
 <div class="w-full max-w-[1280px] px-4 md:px-10 py-8 mx-auto">
   <div class="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between border-b border-[#e7ebf3] dark:border-[#2a3441] pb-8">
     <div class="flex flex-col gap-1">
-      <h2 class="text-3xl font-bold text-[#0d121b] dark:text-white">Meet Our Team</h2>
-      <p class="text-[#4c669a] dark:text-[#94a3b8]">Browse our directory of 42 legal professionals.</p>
+      <h2 class="text-3xl font-bold text-[#0d121b] dark:text-white">{{ 'attorneys.search.title' | translate }}</h2>
+      <p class="text-[#4c669a] dark:text-[#94a3b8]">{{ 'attorneys.search.subtitle' | translate }}</p>
     </div>
     <div class="flex flex-col md:flex-row gap-4 w-full lg:w-auto">
       <!-- Search Bar -->
       <label class="relative flex items-center h-12 w-full md:w-80">
         <span class="absolute left-4 text-[#4c669a] dark:text-[#94a3b8] material-symbols-outlined">search</span>
         <input class="w-full h-full pl-12 pr-4 rounded-lg bg-surface-light dark:bg-surface-dark border border-[#e7ebf3] dark:border-[#2a3441] text-[#0d121b] dark:text-white placeholder:text-[#4c669a] dark:placeholder:text-[#64748b] focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-          placeholder="Search by name..." type="text"/>
+          [placeholder]="'attorneys.search.placeholder' | translate" type="text"/>
       </label>
     </div>
   </div>
   <!-- Chips Filter -->
   <div class="flex flex-wrap gap-3 py-6">
     <button class="flex h-9 items-center justify-center rounded-lg bg-[#0d121b] dark:bg-white text-white dark:text-[#0d121b] px-5 text-sm font-bold transition-transform active:scale-95">
-      All
+      {{ 'attorneys.search.all' | translate }}
     </button>
     <button class="flex h-9 items-center justify-center rounded-lg bg-[#e7ebf3] dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-[#2a3441] text-[#0d121b] dark:text-[#f8f9fc] px-5 text-sm font-medium transition-colors">
-      Corporate Law
+      {{ 'attorneys.search.corporateLaw' | translate }}
     </button>
     <button class="flex h-9 items-center justify-center rounded-lg bg-[#e7ebf3] dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-[#2a3441] text-[#0d121b] dark:text-[#f8f9fc] px-5 text-sm font-medium transition-colors">
-      Litigation
+      {{ 'attorneys.search.litigation' | translate }}
     </button>
     <button class="flex h-9 items-center justify-center rounded-lg bg-[#e7ebf3] dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-[#2a3441] text-[#0d121b] dark:text-[#f8f9fc] px-5 text-sm font-medium transition-colors">
-      Family Law
+      {{ 'attorneys.search.familyLaw' | translate }}
     </button>
     <button class="flex h-9 items-center justify-center rounded-lg bg-[#e7ebf3] dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-[#2a3441] text-[#0d121b] dark:text-[#f8f9fc] px-5 text-sm font-medium transition-colors">
-      Intellectual Property
+      {{ 'attorneys.search.intellectualProperty' | translate }}
     </button>
     <button class="flex h-9 items-center justify-center rounded-lg bg-[#e7ebf3] dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-[#2a3441] text-[#0d121b] dark:text-[#f8f9fc] px-5 text-sm font-medium transition-colors">
-      Real Estate
+      {{ 'attorneys.search.realEstate' | translate }}
     </button>
   </div>
 </div>

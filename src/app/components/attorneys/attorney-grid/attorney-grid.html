@@ -1,5 +1,5 @@
 <div class="w-full max-w-[1280px] px-4 md:px-10 mx-auto py-8">
-  <h2 class="text-3xl font-bold text-[#0d121b] dark:text-white mb-8">Our Lawyers</h2>
+  <h2 class="text-3xl font-bold text-[#0d121b] dark:text-white mb-8">{{ 'attorneys.ourLawyers' | translate }}</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-12">
     @for (attorney of attorneys; track attorney.id) {
       <div class="group flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e7ebf3] dark:border-[#2a3441] overflow-hidden hover:border-primary/50 hover:shadow-lg dark:hover:border-primary/50 transition-all duration-300">
@@ -38,7 +38,7 @@
                 </a>
               }
             </div>
-            <a [routerLink]="['/lawyers', attorney.id]" class="text-sm font-bold text-primary hover:text-primary-dark hover:underline cursor-pointer">View Profile</a>
+            <a [routerLink]="['/lawyers', attorney.id]" class="text-sm font-bold text-primary hover:text-primary-dark hover:underline cursor-pointer">{{ 'attorneys.viewProfile' | translate }}</a>
           </div>
         </div>
       </div>

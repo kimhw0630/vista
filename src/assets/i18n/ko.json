@@ -21,21 +21,33 @@
     "language": "언어"
   },
   "footer": {
+    "companyName": "비스타 로펌",
+    "description": "성실과 결과에 대한 헌신으로 최고 수준의 법률 서비스를 제공합니다. 우리는 귀하를 위해 싸우기 위해 여기 있습니다.",
     "quickLinks": "빠른 링크",
+    "legal": "법적 고지",
+    "contactUs": "연락처",
     "practiceAreas": "업무 분야",
+    "ourLawyers": "변호사 및 팀",
+    "aboutUs": "회사 소개",
+    "contact": "문의하기",
     "contactInfo": "연락처 정보",
     "followUs": "팔로우",
     "allRightsReserved": "모든 권리 보유",
     "privacyPolicy": "개인정보 보호정책",
-    "termsOfService": "서비스 약관",
-    "disclaimer": "면책 조항"
+    "termsOfService": "서비스 이용약관",
+    "disclaimer": "면책조항",
+    "address": "26 Glen Cameron Road, Markham",
+    "addressLine2": "Ontario, L6C 1Y1",
+    "phone": "(905) 886-3339",
+    "email": "info@vistallp.ca",
+    "copyright": "© 2025 비스타 로펌. 모든 권리 보유."
   },
   "home": {
     "hero": {
       "badge": "신뢰할 수 있는 법률 파트너",
-      "title": "으로 고객의 권리를 지켜드립니다",
-      "titleHighlight1": "정직",
-      "titleHighlight2": "전문성",
+      "title": "저희 Vista 의 철학 입니다.",
+      "titleHighlight1": "비전",
+      "titleHighlight2": "열정",
       "subtitle": "복잡한 소송과 기업 법률 문제에 정통한 전문가들이, 결정적인 순간에 명확한 방향과 적극적인 법률 대응을 제공합니다",
       "scheduleConsultation": "상담 예약",
       "viewPracticeAreas": "업무 분야 보기",
@@ -49,19 +61,19 @@
     },
     "expertise": {
       "title": "핵심 전문 분야",
-      "subtitle": "다양한 법률 분야에 대한 전문성을 바탕으로, 고객의 개별적인 필요에 맞춘 맞춤형 해결책을 제공합니다",
+      "subtitle": "Vista는 다음과 같은 법률 서비스를 제공합니다.",
       "viewAll": "모든 업무 분야 보기",
       "corporateBusiness": {
         "title": "기업 및 비즈니스",
-        "description": "법인 설립에서 기업 매매, 주주 간 계약, 기업 구조조정과 지배구조, 비즈니스 컨설팅까지 맞춤형 솔루션을 제공합니다."
+        "description": "법인 설립, 사업체 인수 및 매각, 주주 계약, 기업 구조 조정, 기업 지배 구조, 비즈니스 컨설팅."
       },
       "civilLitigation": {
         "title": "민사·상사 소송",
-        "description": "계약 문제, 채무 회수, 판결 집행 등 다양한 민사·상사 소송에서 고객에게 최적의 법률 솔루션을 제공합니다."
+        "description": "계약 위반, 과실, 허위 진술, 채권 추심, 판결 집행, 압류, 강제 매각 절차 등의 민사 소송."
       },
       "realEstate": {
         "title": "부동산",
-        "description": "주거·상업용 부동산, 모기지, 콘도 매매, 토지 개발 및 별장 거래까지 고객 맞춤형 법률 솔루션을 제공합니다."
+        "description": "주거 및 상업용 부동산 거래, 제 3 금융권, 콘도 구매/판매, 토지 개발, 카티지."
       },
       "leasing": {
         "title": "임대차",
@@ -91,7 +103,7 @@
     },
     "cta": {
       "title": "사건 상담을 준비하고 계신가요?",
-      "subtitle": "오늘 바로 연락하여 무료 상담을 받아보세요. 상담 내용은 철저히 보호되며, 법적 문제를 자신 있게 해결할 수 있도록 도와드립니다.",
+      "subtitle": "지금 바로 문의하시면 비밀이 보장된 상담을 통해 법적 문제를 차분하고 명확하게 안내해 드립니다.",
       "bookAppointment": "예약하기",
       "phone": "(905) 886-3339"
     }
@@ -99,14 +111,35 @@
   "about": {
     "hero": {
       "title": "회사 소개",
-      "subtitle": "법률 서비스의 우수성에 전념"
+      "subtitle": "VISTA는 \"평온한 풍경\"과 \"시야\"를 뜻하는 라틴어 입니다. 법무법인 VISTA는 클라이언트의 의뢰건이 아름다운 풍경을 감상하듯 편안하게 해결될 수 있도록, 열정 적이고 효율적으로 도와드리겠습니다.",
+      "storyButton": "우리의 이야기",
+      "teamButton": "팀 소개"
+    },
+    "stats": {
+      "yearsExperience": "년 경력",
+      "casesWon": "승소 사례",
+      "expertTeams": "전문 팀",
+      "clientSatisfaction": "고객 만족도"
+    },
+    "story": {
+      "label": "우리의 이야기",
+      "title": "우리 로펌의 이야기",
+      "description": "저희 변호사들은 국제 기업부터 중소기업 소유주까지 다양한 고객 그룹을 성공적으로 대변해 왔습니다."
     },
     "philosophy": {
       "title": "우리의 철학",
-      "description": "우리는 각 고객의 고유한 요구에 맞춘 맞춤형 법률 솔루션을 제공합니다."
-    },
-    "story": {
-      "title": "우리의 이야기"
+      "integrity": {
+        "title": "확고한 성실성",
+        "description": "저희는 법이 진실을 위한 도구라고 믿습니다. 청구 및 전략에 있어 완전한 투명성을 가지고 운영합니다."
+      },
+      "clientFocus": {
+        "title": "고객 중심 접근",
+        "description": "귀하는 단순한 사건 번호가 아닙니다. 고객님의 고유한 개인 및 비즈니스 목표에 맞춤화된 전략을 구축합니다."
+      },
+      "excellence": {
+        "title": "행동으로 보여주는 우수성",
+        "description": "충분하다는 말은 저희 사전에 없습니다. 최선의 결과를 위해 끊임없이 노력합니다."
+      }
     },
     "team": {
       "title": "우리 팀을 만나보세요"
@@ -114,15 +147,32 @@
   },
   "attorneys": {
     "hero": {
-      "title": "변호사",
-      "subtitle": "경험 많은 법률 전문가를 만나보세요"
+      "title": "전문 법률 자문. 헌신적인 파트너.",
+      "subtitle": "경험이 풍부한 변호사 팀이 고객님의 권리를 보호하고 최상의 결과를 달성하기 위해 최선을 다합니다."
+    },
+    "breadcrumb": {
+      "home": "홈",
+      "lawyers": "변호사"
     },
     "ourLawyers": "우리 변호사",
     "viewProfile": "프로필 보기",
     "search": {
-      "placeholder": "변호사 검색...",
+      "title": "우리 팀을 만나보세요",
+      "subtitle": "42명의 법률 전문가 디렉토리를 둘러보세요.",
+      "placeholder": "이름으로 검색...",
       "filterByArea": "업무 분야별 필터",
-      "allAreas": "모든 업무 분야"
+      "allAreas": "모든 업무 분야",
+      "all": "전체",
+      "corporateLaw": "기업법",
+      "litigation": "소송",
+      "familyLaw": "가족법",
+      "intellectualProperty": "지적 재산권",
+      "realEstate": "부동산"
+    },
+    "cta": {
+      "title": "적합한 변호사를 찾는 데 도움이 필요하신가요?",
+      "subtitle": "상담을 예약하시면 저희 팀이 귀하의 특정 사건에 가장 적합한 법률 전문가와 연결해 드립니다.",
+      "bookConsultation": "상담 예약"
     },
     "profile": {
       "yearsExperience": "년 경력",
@@ -140,38 +190,174 @@
   },
   "practiceAreas": {
     "hero": {
-      "title": "업무 분야",
-      "subtitle": "여러 분야의 포괄적인 법률 서비스"
+      "title": "전문 분야",
+      "subtitle": "전문적인 법률 대리 서비스를 통해 복잡한 법률 환경을 명확하게 이해하고, 고객님의 상황에 맞는 종합적인 해결책을 제공합니다.",
+      "viewAllPractices": "모든 업무 분야 보기",
+      "meetOurTeam": "팀 소개"
+    },
+    "grid": {
+      "title": "전문 업무 분야",
+      "subtitle": "복잡한 법률 환경을 탐색할 수 있도록 다양한 법률 서비스를 제공합니다."
+    },
+    "areas": {
+      "corporateBusiness": {
+        "title": "기업 및 비즈니스",
+        "description": "법인 설립, 사업체 인수 및 매각, 주주 계약, 기업 구조 조정, 기업 지배 구조, 비즈니스 컨설팅."
+      },
+      "realEstate": {
+        "title": "부동산",
+        "description": "주거 및 상업용 부동산 거래, 제 3 금융권, 콘도 구매/판매, 토지 개발, 카티지."
+      },
+      "civilLitigation": {
+        "title": "민사 및 상사 소송",
+        "description": "계약 위반, 과실, 허위 진술, 채권 추심, 판결 집행, 압류, 강제 매각 절차 등의 민사 소송."
+      },
+      "leasing": {
+        "title": "임대차",
+        "description": "상업, 산업 및 주거용 임대차, 임대차 계약서 작성 및 협상, 임대인 및 임차인 법률."
+      },
+      "employmentLaw": {
+        "title": "고용법",
+        "description": "고용 계약서 초안 작성 및 협상, 부당 해고, 권고사직, 직장 내 괴롭힘."
+      },
+      "willsEstates": {
+        "title": "유언 및 상속",
+        "description": "유언장 및 위임장 작성, 상속 계획, 유언 검인."
+      },
+      "dentalHealth": {
+        "title": "치과 / 건강 법률",
+        "description": "치과 / 카이로프랙틱 / 검안 전문 법인 설립, 의료 전문 법인의 주식 / 자산 매매, 고용 관련 컨설팅."
+      },
+      "referralServices": {
+        "title": "Referral 서비스",
+        "description": "고객의 요청시, 다음과같은 referral 서비스를 연결해 드릴 수 있습니다: trademark 대리인, 법무사, 모기지 브로커, 부동산 중개인, 사업 평가사 등 다양한 분야의 유능하고 신뢰할 수 있는 전문가 네트워크를 보유하고 있습니다."
+      },
+      "immigration": {
+        "title": "이민법",
+        "description": "비자 신청, 영주권, 시민권, 추방 문제, 임시 거주지 신청 등 복잡한 이민법에 대한 법률 자문과 안내를 제공합니다."
+      }
+    },
+    "stats": {
+      "title": "왜 Vista Law를 선택해야 할까요?",
+      "subtitle": "축적된 경험과 신뢰로 증명합니다.",
+      "yearsExperience": "년 경력",
+      "casesWon": "승소율",
+      "clientSatisfaction": "고객 만족도"
+    },
+    "testimonial": {
+      "quote": "첫 상담부터 마지막 단계까지 Vista Law는 신속하고 철저했습니다. 전 과정에 걸쳐 지원을 받고 충분한 정보를 얻을 수 있었습니다."
+    },
+    "filters": {
+      "allAreas": "모든 분야",
+      "personalServices": "개인 서비스",
+      "businessLaw": "비즈니스 법률",
+      "litigation": "소송"
     },
     "viewDetails": "상세 보기",
     "relatedAreas": "관련 업무 분야"
   },
   "contact": {
     "hero": {
-      "title": "문의하기",
-      "subtitle": "법률 팀에 연락하세요"
-    },
-    "form": {
-      "name": "성명",
-      "email": "이메일 주소",
-      "phone": "전화번호",
-      "subject": "제목",
-      "message": "메시지",
-      "submit": "메시지 보내기",
-      "sending": "전송 중...",
-      "success": "감사합니다! 곧 연락드리겠습니다.",
-      "error": "메시지 전송에 실패했습니다. 다시 시도해주세요."
+      "title": "상담 문의",
+      "subtitle": "법률 문제로 고민하고 계시다면, 저희 팀이 비밀이 보장된 상담을 통해 도움을 드리겠습니다."
     },
     "info": {
+      "title": "연락처 정보",
+      "phone": "전화",
+      "email": "이메일",
+      "office": "사무실",
+      "location": "저희 위치",
       "officeHours": "영업 시간",
       "mondayFriday": "월요일 - 금요일",
       "weekend": "토요일 - 일요일",
-      "address": "주소",
-      "phone": "전화",
-      "email": "이메일"
+      "address": "주소"
+    },
+    "form": {
+      "title": "문의하기",
+      "subtitle": "아래 양식을 작성해 주시면 팀 구성원이 곧 연락드리겠습니다.",
+      "name": "성명",
+      "namePlaceholder": "홍길동",
+      "email": "이메일 주소",
+      "emailPlaceholder": "hong@example.com",
+      "phone": "전화번호",
+      "phonePlaceholder": "(905) 886-3339",
+      "subject": "문의 분야",
+      "subjectPlaceholder": "업무 분야 선택",
+      "message": "사건에 대해 말씀해 주세요",
+      "messagePlaceholder": "안녕하세요, 다음에 대해 상담하고 싶습니다...",
+      "privacyLabel": "정책에 동의합니다",
+      "privacyLink": "개인정보 보호정책 보기",
+      "privacyNote": "귀하의 정보는 100% 기밀로 보호됩니다.",
+      "submit": "메시지 보내기",
+      "sending": "전송 중...",
+      "success": "감사합니다! 곧 연락드리겠습니다.",
+      "error": "메시지 전송에 실패했습니다. 다시 시도해주세요.",
+      "validation": {
+        "nameRequired": "성명을 입력해주세요",
+        "emailRequired": "이메일을 입력해주세요",
+        "emailInvalid": "유효한 이메일 주소를 입력해주세요",
+        "phoneRequired": "전화번호를 입력해주세요",
+        "subjectRequired": "업무 분야를 선택해주세요",
+        "privacyRequired": "계속하려면 개인정보 보호정책에 동의해야 합니다"
+      },
+      "subjects": {
+        "corporate": "기업 및 비즈니스",
+        "realEstate": "부동산",
+        "litigation": "민사 및 상사 소송",
+        "employment": "고용법",
+        "wills": "유언 및 상속",
+        "dental": "치과 / 보건법",
+        "referral": "추천 서비스",
+        "leasing": "임대차",
+        "immigration": "이민법",
+        "other": "기타"
+      }
     }
-  },
-  "testimonials": {
+  },  "attorneyProfile": {
+    "breadcrumbs": {
+      "home": "홈",
+      "lawyers": "변호사",
+      "lawyer": "변호사"
+    },
+    "actions": {
+      "emailMe": "이메일 보내기",
+      "downloadVCard": "명함 다운로드",
+      "bookConsultation": "상담 예약"
+    },
+    "contact": {
+      "phone": "전화",
+      "office": "사무실",
+      "officeLocation": "마컴, 온타리오",
+      "linkedin": "링크드인",
+      "viewProfile": "프로필 보기"
+    },
+    "sections": {
+      "education": "학력",
+      "barAdmissions": "변호사 자격",
+      "practiceAreas": "전문 분야"
+    },
+    "tabs": {
+      "profile": "프로필",
+      "experience": "경력",
+      "notableCases": "주요 사건"
+    },
+    "content": {
+      "biographyComingSoon": "약력 정보는 곧 업데이트될 예정입니다.",
+      "experienceTitle": "주요 경력 및 활동",
+      "experienceComingSoon": "경력 정보는 곧 업데이트될 예정입니다.",
+      "casesTitle": "대표 사건",
+      "noCases": "현재 표시할 주요 사건이 없습니다.",
+      "affiliationsTitle": "소속 및 자격",
+      "workWith": "함께하기",
+      "scheduleConsultation": "귀하의 사건에 대해 논의하기 위한 예비 상담을 예약하세요."
+    },
+    "affiliations": {
+      "lso": "온타리오 변호사 협회 (LSO)",
+      "cba": "캐나다 변호사 협회 (CBA)",
+      "oba": "온타리오 법률가 협회 (OBA)",
+      "tla": "토론토 변호사 협회 (TLA)"
+    }
+  },  "testimonials": {
     "title": "고객 후기",
     "subtitle": "고객들이 말하는 우리"
   }

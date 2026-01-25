@@ -6,18 +6,18 @@
           style='background-image: linear-gradient(rgba(16, 22, 34, 0.7) 0%, rgba(16, 22, 34, 0.5) 100%), url("images/Building.png");'>
           <div class="flex flex-col gap-4 text-center max-w-[700px] z-10">
             <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight drop-shadow-md">
-              Our Expertise
+              {{ 'practiceAreas.hero.title' | translate }}
             </h1>
             <h2 class="text-gray-200 text-base font-normal leading-relaxed @[480px]:text-lg">
-              Dedicated Legal Representation. We navigate complex legal landscapes with precision, offering comprehensive solutions tailored to your unique situation.
+              {{ 'practiceAreas.hero.subtitle' | translate }}
             </h2>
           </div>
           <div class="flex flex-wrap gap-4 justify-center z-10">
             <button (click)="scrollToPractices()" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#5a111a] transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
-              <span class="truncate">View All Practices</span>
+              <span class="truncate">{{ 'practiceAreas.hero.viewAllPractices' | translate }}</span>
             </button>
             <button routerLink="/lawyers" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-white/20 transition-all">
-              <span class="truncate">Meet Our Team</span>
+              <span class="truncate">{{ 'practiceAreas.hero.meetOurTeam' | translate }}</span>
             </button>
           </div>
         </div>

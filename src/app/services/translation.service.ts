@@ -104,14 +104,34 @@ export class TranslationService {
    * Change the current language
    */
   setLanguage(lang: Language): void {
-    this.loadTranslations(lang).subscribe(() => {
+    // If language hasn't changed, do nothing
+    if (this.currentLanguageSubject.value === lang) {
+      return;
+    }
+
+    // Store in localStorage first
+    try {
+      localStorage.setItem(this.STORAGE_KEY, lang);
+    } catch (error) {
+      console.warn('Failed to save language preference:', error);
+    }
+    
+    // Load translations if not already loaded
+    if (!this.translations[lang]) {
+      this.loadTranslations(lang).subscribe({
+        next: () => {
+          // Update current language after translations are loaded
+          this.currentLanguageSubject.next(lang);
+        },
+        error: () => {
+          // Even on error, update the language (will fallback to default)
+          this.currentLanguageSubject.next(lang);
+        }
+      });
+    } else {
+      // Translations already loaded, immediately update
       this.currentLanguageSubject.next(lang);
-      try {
-        localStorage.setItem(this.STORAGE_KEY, lang);
-      } catch (error) {
-        console.warn('Failed to save language preference:', error);
-      }
-    });
+    }
   }
 
   /**

@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, ApplicationRef } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService, Language } from '../../services/translation.service';
 import { ClickOutsideDirective } from '../../directives/click-outside.directive';
@@ -26,8 +26,7 @@ export class LanguageSwitcherComponent {
 
   constructor(
     public translationService: TranslationService,
-    private cdr: ChangeDetectorRef,
-    private appRef: ApplicationRef
+    private cdr: ChangeDetectorRef
   ) {}
 
   get currentLanguage(): LanguageOption {
@@ -40,10 +39,10 @@ export class LanguageSwitcherComponent {
   }
 
   selectLanguage(language: LanguageOption): void {
-    this.translationService.setLanguage(language.code);
+    if (language.code !== this.translationService.getCurrentLanguage()) {
+      this.translationService.setLanguage(language.code);
+    }
     this.isOpen = false;
-    // Force application-wide change detection
-    this.appRef.tick();
   }
 
   closeDropdown(): void {

@@ -8,15 +8,9 @@
             {{ 'home.hero.badge' | translate }}
           </div>
           <h1 class="text-4xl lg:text-6xl font-black leading-tight tracking-tight text-[#0d121b] dark:text-white">
-            @if (currentLanguage === 'en') {
-              
               <p class="text-primary">{{ 'home.hero.titleHighlight1' | translate }}.</p>
               <p class="text-primary">{{ 'home.hero.titleHighlight2' | translate }}.</p>
               {{ 'home.hero.title' | translate }} 
-            }
-            @if (currentLanguage === 'ko') {
-              <span class="text-primary">{{ 'home.hero.titleHighlight1' | translate }}</span>과 <span class="text-primary">{{ 'home.hero.titleHighlight2' | translate }}</span> {{ 'home.hero.title' | translate }}
-            }
           </h1>
           <p class="text-lg text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed">
             {{ 'home.hero.subtitle' | translate }}
