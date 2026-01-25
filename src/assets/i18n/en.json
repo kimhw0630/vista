@@ -33,10 +33,10 @@
   "home": {
     "hero": {
       "badge": "Your Trusted Legal Partner",
-      "title": "Defending Your Rights with",
-      "titleHighlight1": "Integrity",
-      "titleHighlight2": "Precision",
-      "subtitle": "Expert legal representation for complex litigation and corporate matters. We are dedicated to providing clear counsel and aggressive advocacy when it matters most.",
+      "title": "We are VISTA",
+      "titleHighlight1": "Vision",
+      "titleHighlight2": "Passion",
+      "subtitle": "Our lawyers have successfully represented a diverse group of clients, ranging from international corporations to small business owners.",
       "scheduleConsultation": "Schedule a Consultation",
       "viewPracticeAreas": "View Practice Areas",
       "promptClientResponse": "Prompt Client Response",
@@ -48,8 +48,8 @@
       "trustedByLeaders": "Trusted by industry leaders"
     },
     "expertise": {
-      "title": "Our Expertise",
-      "subtitle": "We specialize in a wide range of legal areas, offering tailored solutions to meet your specific needs.",
+      "title": "Our Practice Areas",
+      "subtitle": "Our team of experts offer the following legal services",
       "viewAll": "View All Practice Areas",
       "corporateBusiness": {
         "title": "Corporate & Business",
@@ -69,7 +69,7 @@
       }
     },
     "attorneys": {
-      "title": "Meet Our Partners",
+      "title": "Our Lawyers",
       "subtitle": "Driven by a passion for justice and a commitment to excellence. Our team brings decades of combined experience to every case."
     },
     "testimonials": {
@@ -78,7 +78,7 @@
       "whyChooseUs": "Why Choose Us?",
       "provenTrackRecord": {
         "title": "Proven Track Record",
-        "description": "Over $30M recovered for our clients in complex settlements."
+        "description": "Successfully representing clients in complex and high-stakes matters"
       },
       "clientCentric": {
         "title": "Client-Centric Approach",
@@ -86,12 +86,12 @@
       },
       "awardWinning": {
         "title": "Award-Winning Team",
-        "description": "Consistently recognized by Super Lawyers and Best Lawyers in Canada."
+        "description": "Recognized for professionalism and client-focused service."
       }
     },
     "cta": {
       "title": "Ready to discuss your case?",
-      "subtitle": "Contact us today for a free, confidential consultation. Let us help you navigate your legal challenges with confidence.",
+      "subtitle": "Contact us today for a confidential consultation. Let us help you navigate your legal challenges with confidence.",
       "bookAppointment": "Book Appointment",
       "phone": "(905) 886-3339"
     }

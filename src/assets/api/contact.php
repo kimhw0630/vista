@@ -81,7 +81,7 @@ $message
 Hi $fullName,
 
 Thank you for contacting VISTA.
-We have received your message and will get back to you within 24 hours.
+We have received your message and will get back to you as soon as possible.
 
 This is an automatic reply — no need to respond.
 

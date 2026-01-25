@@ -1,22 +1,11 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, APP_INITIALIZER } from '@angular/core';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideAppInitializer } from '@angular/core';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { inject } from '@angular/core';
 import { TranslationService } from './services/translation.service';
+import { AppConfigService } from './services/app-config.service';
 
 import { routes } from './app.routes';
-
-// Initialize translations before app starts
-export function initializeTranslations(translationService: TranslationService) {
-  return () => {
-    const currentLang = translationService.getCurrentLanguage();
-    return new Promise<void>((resolve) => {
-      translationService['loadTranslations'](currentLang).subscribe({
-        next: () => resolve(),
-        error: () => resolve() // Continue even if loading fails
-      });
-    });
-  };
-}
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -26,11 +15,13 @@ export const appConfig: ApplicationConfig = {
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled'
     })),
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initializeTranslations,
-      deps: [TranslationService],
-      multi: true
-    }
+    provideAppInitializer(() => {
+      const appConfigService = inject(AppConfigService);
+      return appConfigService.loadConfig();
+    }),
+    provideAppInitializer(() => {
+      const translationService = inject(TranslationService);
+      return translationService.ensureTranslationsLoaded();
+    })
   ]
 };

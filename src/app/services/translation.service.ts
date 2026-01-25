@@ -25,19 +25,8 @@ export class TranslationService {
   public language$ = this.currentLanguage$;
 
   constructor(private http: HttpClient) {
-    // Load saved language from localStorage or default
-    const savedLang = this.getStoredLanguage();
-    
-    // Load initial translations
-    this.loadTranslations(savedLang).subscribe({
-      next: () => {
-        this.currentLanguageSubject.next(savedLang);
-      },
-      error: () => {
-        // If loading fails, still set the language to prevent blocking
-        this.currentLanguageSubject.next(savedLang);
-      }
-    });
+    // Constructor is intentionally minimal
+    // Translation loading is handled by APP_INITIALIZER in app.config.ts
   }
 
   /**
@@ -62,16 +51,18 @@ export class TranslationService {
   /**
    * Ensure translations are loaded for current language
    */
-  ensureTranslationsLoaded(): Observable<boolean> {
+  ensureTranslationsLoaded(): Promise<boolean> {
     const currentLang = this.getCurrentLanguage();
     if (this.translations[currentLang]) {
-      return of(true);
+      return Promise.resolve(true);
     }
     
-    return this.loadTranslations(currentLang).pipe(
-      map(() => true),
-      catchError(() => of(false))
-    );
+    return new Promise((resolve) => {
+      this.loadTranslations(currentLang).subscribe({
+        next: () => resolve(true),
+        error: () => resolve(false)
+      });
+    });
   }
 
   /**

@@ -1,0 +1,11 @@
+{
+  "theme": {
+    "primaryColor": "#781723",
+    "secondaryColor": "#9e1e2d"
+  },
+  "features": {
+    "showTestimonials": true,
+    "showTrustIndicators": true,
+    "showCTA": true
+  }
+}

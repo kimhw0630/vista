@@ -12,13 +12,14 @@
             <h3 class="text-xl font-bold text-[#0d121b] dark:text-white group-hover:text-primary transition-colors">{{ attorney.name }}</h3>
             <p class="text-sm font-medium text-[#4c669a] dark:text-[#94a3b8]">{{ attorney.title }}</p>
           </div>
-          @if (attorney.specialties && attorney.specialties.length > 0) {
+          <p class="text-sm text-gray-500 dark:text-gray-400">{{ attorney.shortDescription }}</p>
+          <!-- @if (attorney.specialties && attorney.specialties.length > 0) {
             <div class="flex flex-wrap gap-2">
               @for (specialty of attorney.specialties; track specialty) {
                 <span class="inline-flex items-center rounded bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">{{ specialty }}</span>
               }
             </div>
-          }
+          } -->
           <div class="mt-auto pt-4 flex items-center justify-between border-t border-[#e7ebf3] dark:border-[#2a3441]">
             <div class="flex gap-3">
               @if (attorney.email) {

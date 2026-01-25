@@ -5,6 +5,7 @@ export interface Attorney {
   name: string;
   title: string;
   description: string;
+  shortDescription?: string;
   image: string;
   specialties?: string[];
   email?: string;
@@ -27,6 +28,7 @@ export class AttorneyService {
       id: 'jae-hyun-park',
       name: 'Jae Hyun Park',
       title: 'Partner',
+      shortDescription: 'Jae Park is the managing partner at Vista Law LLP. He is an Ontario lawyer and notary public.',
       description: 'Managing Partner | Ontario Lawyer & Notary Public.',
       image: 'images/JaeHyunPark_color.png',
       specialties: ['Corporate Law', 'Real Estate'],
@@ -134,6 +136,7 @@ export class AttorneyService {
       id: 'theresa-wooyeon-choi',
       name: 'Theresa Wooyeon Choi',
       title: 'Partner',
+      shortDescription: 'Theresa Wooyeon Choi is a partner at Vista Law LLP and is the head of the firm’s Real Estate Department. ',
       description: 'Partner | Head of Real Estate Department',
       image: 'images/TheresaWooyeonChoi_color.png',
       specialties: ['Real Estate', 'Property Law'],
@@ -206,6 +209,7 @@ export class AttorneyService {
       name: 'Steven Hong',
       title: 'Partner',
       description: 'Partner | Commercial Law & Civil Litigation.',
+      shortDescription: 'Steven Hong is a partner at Vista Law LLP with a focus on the areas of Commercial Law and Civil Litigation. ',
       image: 'images/StevenHong_color.png',
       specialties: ['Commercial Law', 'Civil Litigation'],
       email: 'hong@vistallp.ca',
@@ -271,6 +275,7 @@ export class AttorneyService {
       name: 'Warren Chan',
       title: 'Partner',
       description: 'Partner | Practicing in Association.',
+      shortDescription: 'Warren Chan is a lawyer practicing in association* at Visa Law LLP.',
       image: 'images/WarrenChan_color.png',
       specialties: ['General Practice'],
       email: '',
@@ -339,6 +344,7 @@ export class AttorneyService {
       name: 'Chan Yeung Kang',
       title: 'Counsel to the Firm',
       description: 'Honorary Member | Retired as of July 1, 2025.',
+      shortDescription: 'Chan Yeung Kang is the first-ever Korean Canadian Lawyer in Canada.',
       image: 'images/ChanYeungKang_color.png',
       specialties: ['Counsel'],
       email: '',
