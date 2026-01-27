@@ -32,7 +32,7 @@
                 {{ 'attorneyProfile.actions.emailMe' | translate }}
               </a>
             }
-            <button class="flex items-center justify-center gap-2 bg-[#e7ebf3] dark:bg-gray-800 text-[#0d121b] dark:text-white h-10 rounded-lg text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors w-full">
+            <button (click)="downloadVCard()" class="flex items-center justify-center gap-2 bg-[#e7ebf3] dark:bg-gray-800 text-[#0d121b] dark:text-white h-10 rounded-lg text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors w-full">
               <span class="material-symbols-outlined text-[18px]">contact_page</span>
               {{ 'attorneyProfile.actions.downloadVCard' | translate }}
             </button>
@@ -118,7 +118,7 @@
       <!-- Header Info -->
       <div class="mb-8">
         <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-[#0d121b] dark:text-white mb-2">{{ attorney.name }}</h1>
-        <p class="text-xl text-[#4c669a] dark:text-gray-400 font-medium">{{ attorney.title }} @if (attorney.description) { <span class="mx-2 text-gray-300">|</span> {{ attorney.description }} }</p>
+        <p class="text-xl text-[#4c669a] dark:text-gray-400 font-medium"> @if (attorney.description) { <span class="mx-2 text-gray-300"></span> {{ attorney.description }} }</p>
   
       </div>
 
@@ -276,7 +276,7 @@
         </div>
         <div class="bg-primary text-white p-6 rounded-xl relative overflow-hidden group cursor-pointer">
           <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white/10 rounded-full blur-2xl group-hover:bg-white/20 transition-colors"></div>
-          <h3 class="font-bold text-lg mb-2 relative z-10">{{ 'attorneyProfile.content.workWith' | translate }} {{ attorney.name }}</h3>
+          <h3 class="font-bold text-lg mb-2 relative z-10">{{ 'attorneyProfile.content.workWith' | translate:{ name: attorney.name } }}</h3>
           <p class="text-blue-100 text-sm mb-4 relative z-10">{{ 'attorneyProfile.content.scheduleConsultation' | translate }}</p>
           <a routerLink="/contact">
             <button class="bg-white text-primary text-sm font-bold py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors relative z-10">

@@ -40,7 +40,7 @@
     "addressLine2": "Ontario, L6C 1Y1",
     "phone": "(905) 886-3339",
     "email": "info@vistallp.ca",
-    "copyright": "© 2025 Vista Law LLP. All rights reserved."
+    "copyright": "Copyright © VISTA LAW LLP"
   },
   "home": {
     "hero": {
@@ -340,7 +340,7 @@
     "tabs": {
       "profile": "Profile",
       "experience": "Professional Experience",
-      "notableCases": "Notable Cases"
+      "notableCases": "Notable Cases & Clients"
     },
     "content": {
       "biographyComingSoon": "Biography information coming soon.",
@@ -349,7 +349,7 @@
       "casesTitle": "Representative Matters",
       "noCases": "No notable cases available at this time.",
       "affiliationsTitle": "Affiliations",
-      "workWith": "Work with",
+      "workWith": "Work with {{name}}",
       "scheduleConsultation": "Schedule a preliminary consultation to discuss your case details."
     },
     "affiliations": {

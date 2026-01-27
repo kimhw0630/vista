@@ -40,7 +40,7 @@
     "addressLine2": "Ontario, L6C 1Y1",
     "phone": "(905) 886-3339",
     "email": "info@vistallp.ca",
-    "copyright": "© 2025 비스타 로펌. 모든 권리 보유."
+    "copyright": "Copyright © VISTA LAW LLP"
   },
   "home": {
     "hero": {
@@ -60,7 +60,7 @@
       "trustedByLeaders": "업계에서 신뢰받는 로펌"
     },
     "expertise": {
-      "title": "핵심 전문 분야",
+      "title": "업무 분야",
       "subtitle": "Vista는 다음과 같은 법률 서비스를 제공합니다.",
       "viewAll": "모든 업무 분야 보기",
       "corporateBusiness": {
@@ -124,7 +124,7 @@
     "story": {
       "label": "우리의 이야기",
       "title": "우리 로펌의 이야기",
-      "description": "저희 변호사들은 국제 기업부터 중소기업 소유주까지 다양한 고객 그룹을 성공적으로 대변해 왔습니다."
+      "description": "저희 변호사들은 국제 기업부터 중소기업 소유주에 이르기까지 다양한 고객을 성공적으로 대리해 왔습니다. VISTA LAW는 고객의 의견과 시간, 그리고 비용의 가치를 중요하게 생각합니다. 수백만 달러 규모의 복잡한 기업 인수, 중요한 소송, 또는 주택 매매와 같은 비교적 단순한 사안까지, 어떤 상황에서도 저희 전문팀은 지속적인 법률 자문과 신중한 대리를 제공합니다."
     },
     "philosophy": {
       "title": "우리의 철학",
@@ -258,7 +258,7 @@
   },
   "contact": {
     "hero": {
-      "title": "상담 문의",
+      "title": "문의 및 상담신청",
       "subtitle": "법률 문제로 고민하고 계시다면, 저희 팀이 비밀이 보장된 상담을 통해 도움을 드리겠습니다."
     },
     "info": {
@@ -339,7 +339,7 @@
     "tabs": {
       "profile": "프로필",
       "experience": "경력",
-      "notableCases": "주요 사건"
+      "notableCases": "주목할 만한 사례 "
     },
     "content": {
       "biographyComingSoon": "약력 정보는 곧 업데이트될 예정입니다.",
@@ -348,8 +348,8 @@
       "casesTitle": "대표 사건",
       "noCases": "현재 표시할 주요 사건이 없습니다.",
       "affiliationsTitle": "소속 및 자격",
-      "workWith": "함께하기",
-      "scheduleConsultation": "귀하의 사건에 대해 논의하기 위한 예비 상담을 예약하세요."
+      "workWith": "{{name}} 변호사와 상담하기",
+      "scheduleConsultation": "사건 내용을 검토하기 위한 예비 상담을 예약해 보세요."
     },
     "affiliations": {
       "lso": "온타리오 변호사 협회 (LSO)",

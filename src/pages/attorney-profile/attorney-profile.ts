@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 import { AttorneyService, Attorney } from '../../app/services/attorney.service';
 import { SeoService } from '../../app/services/seo.service';
 import { TranslatePipe } from '../../app/pipes/translate.pipe';
@@ -10,23 +12,30 @@ import { TranslatePipe } from '../../app/pipes/translate.pipe';
   templateUrl: './attorney-profile.html',
   styleUrl: './attorney-profile.scss'
 })
-export class AttorneyProfileComponent implements OnInit {
+export class AttorneyProfileComponent implements OnInit, OnDestroy {
   activeTab: string = 'biography';
   attorney: Attorney | undefined;
   returnUrl: string = '/lawyers';
+  private subscription?: Subscription;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private attorneyService: AttorneyService,
-    private seoService: SeoService
+    private seoService: SeoService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
-    // Get attorney ID from route params
-    this.route.params.subscribe(params => {
-      const id = params['id'];
-      this.attorney = this.attorneyService.getAttorneyById(id);
+    // Get attorney ID from route params and subscribe to attorney data changes
+    this.subscription = this.route.params.pipe(
+      switchMap(params => {
+        const id = params['id'];
+        return this.attorneyService.getAttorneyById$(id);
+      })
+    ).subscribe(attorney => {
+      this.attorney = attorney;
+      this.cdr.markForCheck();
       
       // If attorney not found, redirect to lawyers page
       if (!this.attorney) {
@@ -43,6 +52,10 @@ export class AttorneyProfileComponent implements OnInit {
         this.returnUrl = params['returnUrl'];
       }
     });
+  }
+
+  ngOnDestroy() {
+    this.subscription?.unsubscribe();
   }
 
   updateSeo() {
@@ -85,5 +98,45 @@ export class AttorneyProfileComponent implements OnInit {
 
   goBack() {
     this.router.navigate([this.returnUrl]);
+  }
+
+  downloadVCard() {
+    if (!this.attorney) return;
+
+    // Create vCard content (version 3.0)
+    const vCardData = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      `FN:${this.attorney.name}`,
+      `N:${this.getLastName(this.attorney.name)};${this.getFirstName(this.attorney.name)};;;`,
+      `TITLE:${this.attorney.title}`,
+      `ORG:Vista Law LLP`,
+      this.attorney.email ? `EMAIL;TYPE=INTERNET,WORK:${this.attorney.email}` : '',
+      this.attorney.phone ? `TEL;TYPE=WORK,VOICE:${this.attorney.phone}` : '',
+      `ADR;TYPE=WORK:;;7030 Woodbine Ave., Suite 500;Markham;Ontario;L3R 6G2;Canada`,
+      `URL:https://vistallp.ca/lawyers/${this.attorney.id}`,
+      'END:VCARD'
+    ].filter(line => line).join('\r\n');
+
+    // Create blob and download
+    const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${this.attorney.name.replace(/\s+/g, '_')}.vcf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+  }
+
+  private getFirstName(fullName: string): string {
+    const parts = fullName.split(' ');
+    return parts.slice(0, -1).join(' ') || parts[0];
+  }
+
+  private getLastName(fullName: string): string {
+    const parts = fullName.split(' ');
+    return parts.length > 1 ? parts[parts.length - 1] : '';
   }
 }

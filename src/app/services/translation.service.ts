@@ -23,10 +23,20 @@ export class TranslationService {
   // Public observables
   public currentLanguage$ = this.currentLanguageSubject.asObservable();
   public language$ = this.currentLanguage$;
+  
+  // Language change listeners
+  private languageChangeListeners: Array<(lang: Language) => void> = [];
 
   constructor(private http: HttpClient) {
     // Constructor is intentionally minimal
     // Translation loading is handled by APP_INITIALIZER in app.config.ts
+  }
+
+  /**
+   * Register a listener for language changes
+   */
+  onLanguageChange(callback: (lang: Language) => void): void {
+    this.languageChangeListeners.push(callback);
   }
 
   /**
@@ -122,15 +132,21 @@ export class TranslationService {
         next: () => {
           // Update current language after translations are loaded
           this.currentLanguageSubject.next(lang);
+          // Notify all listeners
+          this.languageChangeListeners.forEach(listener => listener(lang));
         },
         error: () => {
           // Even on error, update the language (will fallback to default)
           this.currentLanguageSubject.next(lang);
+          // Notify all listeners
+          this.languageChangeListeners.forEach(listener => listener(lang));
         }
       });
     } else {
       // Translations already loaded, immediately update
       this.currentLanguageSubject.next(lang);
+      // Notify all listeners
+      this.languageChangeListeners.forEach(listener => listener(lang));
     }
   }
 
