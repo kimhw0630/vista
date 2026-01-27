@@ -19,7 +19,7 @@ module.exports = {
         "text-secondary": "#4a5568",
       },
       fontFamily: {
-        "display": ["Public Sans", "sans-serif"]
+        "display": ["Pretendard", "-apple-system", "BlinkMacSystemFont", "system-ui", "Roboto", "sans-serif"]
       },
     },
   },
